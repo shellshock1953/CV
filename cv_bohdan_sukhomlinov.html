@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bohdan Sukhomlinov - Senior DevOps Engineer</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 50px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        header {
+            text-align: center;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 25px;
+            margin-bottom: 30px;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #1e40af;
+            margin-bottom: 5px;
+        }
+        .subtitle {
+            font-size: 1.2em;
+            color: #64748b;
+            margin-bottom: 15px;
+        }
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            font-size: 0.95em;
+        }
+        .contact-info a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        .contact-info a:hover { text-decoration: underline; }
+        h2 {
+            color: #1e40af;
+            font-size: 1.4em;
+            margin: 30px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        h3 {
+            color: #334155;
+            font-size: 1.1em;
+            margin: 20px 0 5px;
+        }
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: baseline;
+        }
+        .job-title { font-weight: 600; color: #1e40af; }
+        .job-period { color: #64748b; font-size: 0.9em; }
+        .job-location { color: #64748b; font-size: 0.9em; }
+        ul {
+            margin: 10px 0 10px 20px;
+        }
+        li { margin: 5px 0; }
+        .skills-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+        .skill-category {
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+        }
+        .skill-category h3 {
+            margin: 0 0 15px 0;
+            color: #1e40af;
+            font-size: 1em;
+        }
+        .skill-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 8px 0;
+            font-size: 0.9em;
+        }
+        .skill-name { flex: 1; }
+        .skill-bar {
+            width: 120px;
+            height: 8px;
+            background: #e2e8f0;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .skill-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #2563eb, #3b82f6);
+            border-radius: 4px;
+        }
+        .skill-level {
+            width: 35px;
+            text-align: right;
+            color: #64748b;
+            font-size: 0.85em;
+        }
+        .project-card {
+            background: #f8fafc;
+            padding: 15px 20px;
+            margin: 15px 0;
+            border-left: 4px solid #2563eb;
+            border-radius: 0 8px 8px 0;
+        }
+        .project-card h4 {
+            color: #1e40af;
+            margin-bottom: 5px;
+        }
+        .project-tech {
+            font-size: 0.85em;
+            color: #64748b;
+            margin-bottom: 8px;
+        }
+        .education-item {
+            margin: 15px 0;
+            padding-left: 15px;
+            border-left: 3px solid #2563eb;
+        }
+        .degree { font-weight: 600; color: #334155; }
+        .school { color: #64748b; }
+        .year { color: #94a3b8; font-size: 0.9em; }
+        .languages {
+            display: flex;
+            gap: 30px;
+            margin-top: 10px;
+        }
+        .lang-item span { color: #64748b; }
+        .volunteer {
+            background: linear-gradient(135deg, #fef3c7, #fde68a);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+        .volunteer-icon { font-size: 1.5em; margin-right: 10px; }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+            color: #94a3b8;
+            font-size: 0.9em;
+        }
+        @media print {
+            body { background: white; padding: 0; }
+            .container { box-shadow: none; padding: 20px; }
+            .skills-section { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 600px) {
+            .skills-section { grid-template-columns: 1fr; }
+            .contact-info { flex-direction: column; align-items: center; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Bohdan Sukhomlinov</h1>
+            <div class="subtitle">Senior DevOps Engineer | Platform Engineer | SRE</div>
+            <div class="contact-info">
+                <span>📧 shellshock.dnull@gmail.com</span>
+                <span>📱 +380952176437</span>
+                <span>📍 Lviv, Ukraine</span>
+                <a href="https://www.linkedin.com/in/shellshock-dnull/">🔗 LinkedIn</a>
+                <a href="https://github.com/shellshock1953">💻 GitHub</a>
+            </div>
+        </header>
+
+        <section>
+            <h2>Professional Summary</h2>
+            <p>Senior DevOps Engineer with over 10 years of experience in the industry, progressing from Systems Administrator through DevOps to SRE and Platform Engineering roles. Specialized in designing and managing cloud-native infrastructure on AWS and Azure with deep expertise in Kubernetes orchestration. Strong advocate for open source with active contributions, experienced educator, and dedicated volunteer supporting Ukrainian government and military projects.</p>
+        </section>
+
+        <section>
+            <h2>Experience</h2>
+            
+            <div class="job-header">
+                <h3><span class="job-title">SoftServe</span> — DevOps Engineer</h3>
+                <span class="job-period">July 2019 – Present</span>
+            </div>
+            <div class="job-location">Lviv, Ukraine</div>
+            <ul>
+                <li>Architecting and maintaining multi-cloud infrastructure across AWS and Azure environments</li>
+                <li>Implementing GitOps workflows using ArgoCD, Argo Workflows, and Argo Events for continuous deployment</li>
+                <li>Managing self-hosted and SaaS Kubernetes clusters (EKS, AKS, Talos) with advanced autoscaling strategies</li>
+                <li>Building Infrastructure as Code solutions using Terraform and Pulumi</li>
+                <li>Establishing CI/CD pipelines with GitHub Actions, GitLab CI, and Jenkins</li>
+            </ul>
+
+            <div class="job-header">
+                <h3><span class="job-title">Lviv State University of Life Safety</span> — Student Teacher</h3>
+                <span class="job-period">Sep 2019 – Jun 2020</span>
+            </div>
+            <div class="job-location">Lviv, Ukraine (Part-time)</div>
+            <ul>
+                <li>Delivered courses on Linux Operating Systems and system administration</li>
+                <li>Taught Relational Databases with focus on PostgreSQL</li>
+                <li>Instructed Python programming and cybersecurity fundamentals</li>
+            </ul>
+
+            <div class="job-header">
+                <h3><span class="job-title">Quintagroup</span> — DevOps Engineer</h3>
+                <span class="job-period">Jan 2017 – Jun 2019</span>
+            </div>
+            <div class="job-location">Lviv, Ukraine</div>
+            <ul>
+                <li>Led infrastructure automation for Prozorro and Prozorro Sale public procurement platforms</li>
+                <li>Developed configuration management solutions using Ansible</li>
+                <li>Implemented Infrastructure as Code with Terraform on AWS</li>
+                <li>Built comprehensive monitoring and alerting systems using ELK stack and Netdata</li>
+            </ul>
+
+            <div class="job-header">
+                <h3><span class="job-title">UARNet</span> — System Administrator</h3>
+                <span class="job-period">Jul 2014 – Nov 2016</span>
+            </div>
+            <div class="job-location">Lviv, Ukraine</div>
+            <ul>
+                <li>Administered bare-metal server infrastructure for ISP operations</li>
+                <li>Managed DNS, Mail, and Hosting services for colocation clients</li>
+                <li>Operated domain reseller services and provided technical support</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Projects</h2>
+            
+            <div class="project-card">
+                <h4>🇺🇦 Prozorro / Prozorro Sale</h4>
+                <div class="project-tech">AWS, DeNovo Cloud, Python, Bash, GitLab CI, Ansible, Terraform, ELK, Netdata, Grafana</div>
+                <p>Public electronic procurement system for Ukrainian state and municipal customers. Served millions of transactions and became a model for government digitalization.</p>
+            </div>
+
+            <div class="project-card">
+                <h4>🚚 Overhaul</h4>
+                <div class="project-tech">AWS, Azure, Kubernetes, Jenkins, GitHub Actions</div>
+                <p>Global cargo protection platform providing real-time visibility, risk management, and recovery services for supply chain security.</p>
+            </div>
+
+            <div class="project-card">
+                <h4>🎖️ MOU (Ministry of Defense Ukraine) — Volunteer</h4>
+                <div class="project-tech">AWS, ECS, GitHub Actions, Terraform, Terragrunt</div>
+                <p>Supporting Ukrainian military forces with secure, scalable infrastructure for critical operations.</p>
+            </div>
+
+            <div class="project-card">
+                <h4>🍎 Appelsin — Student Mentorship</h4>
+                <div class="project-tech">Node.js, Python, GitHub Actions, Argo Workflows, Kubernetes (Talos + AWS)</div>
+                <p>Mentored students through practical DevOps project implementation, teaching modern cloud-native development practices.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Technical Skills</h2>
+            <div class="skills-section">
+                <div class="skill-category">
+                    <h3>☁️ Cloud Platforms</h3>
+                    <div class="skill-item"><span class="skill-name">AWS</span><div class="skill-bar"><div class="skill-fill" style="width: 80%"></div></div><span class="skill-level">8/10</span></div>
+                    <div class="skill-item"><span class="skill-name">Symbiosis</span><div class="skill-bar"><div class="skill-fill" style="width: 70%"></div></div><span class="skill-level">7/10</span></div>
+                    <div class="skill-item"><span class="skill-name">GitHub</span><div class="skill-bar"><div class="skill-fill" style="width: 60%"></div></div><span class="skill-level">6/10</span></div>
+                    <div class="skill-item"><span class="skill-name">GitLab</span><div class="skill-bar"><div class="skill-fill" style="width: 50%"></div></div><span class="skill-level">5/10</span></div>
+                    <div class="skill-item"><span class="skill-name">Azure</span><div class="skill-bar"><div class="skill-fill" style="width: 40%"></div></div><span class="skill-level">4/10</span></div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>⚙️ Orchestration & Containers</h3>
+                    <div class="skill-item"><span class="skill-name">Docker / Compose</span><div class="skill-bar"><div class="skill-fill" style="width: 80%"></div></div><span class="skill-level">8/10</span></div>
+                    <div class="skill-item"><span class="skill-name">Kubernetes</span><div class="skill-bar"><div class="skill-fill" style="width: 70%"></div></div><span class="skill-level">7/10</span></div>
+                    <div class="skill-item"><span class="skill-name">Cluster Autoscaler</span><div class="skill-bar"><div class="skill-fill" style="width: 60%"></div></div><span class="skill-level">6/10</span></div>
+                    <div class="skill-item"><span class="skill-name">Helm</span><div class="skill-bar"><div class="skill-fill" style="width: 60%"></div></div><span class="skill-level">6/10</span></div>
+                    <div class="skill-item"><span class="skill-name">KEDA</span><div class="skill-bar"><div class="skill-fill" style="width: 50%"></div></div><span class="skill-level">5/10</span></div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>🏗️ Infrastructure as Code</h3>
+                    <div class="skill-item"><span class="skill-name">Ansible</span><div class="skill-bar"><div class="skill-fill" style="width: 80%"></div></div><span class="skill-level">8/10</span></div>
+                    <div class="skill-item"><span class="skill-name">Terraform</span><div class="skill-bar"><div class="skill-fill" style="width: 50%"></div></div><span class="skill-level">5/10</span></div>
+                    <div class="skill-item"><span class="skill-name">Pulumi</span><div class="skill-bar"><div class="skill-fill" style="width: 40%"></div></div><span class="skill-level">4/10</span></div>
+                    <div class="skill-item"><span class="skill-name">Terragrunt</span><div class="skill-bar"><div class="skill-fill" style="width: 30%"></div></div><span class="skill-level">3/10</span></div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>🔄 CI/CD & GitOps</h3>
+                    <div class="skill-item"><span class="skill-name">ArgoCD</span><div class="skill-bar"><div class="skill-fill" style="width: 70%"></div></div><span class="skill-level">7/10</span></div>
+                    <div class="skill-item"><span class="skill-name">GitLab CI</span><div class="skill-bar"><div class="skill-fill" style="width: 60%"></div></div><span class="skill-level">6/10</span></div>
+                    <div class="skill-item"><span class="skill-name">GitHub Actions</span><div class="skill-bar"><div class="skill-fill" style="width: 50%"></div></div><span class="skill-level">5/10</span></div>
+                    <div class="skill-item"><span class="skill-name">Jenkins</span><div class="skill-bar"><div class="skill-fill" style="width: 50%"></div></div><span class="skill-level">5/10</span></div>
+                    <div class="skill-item"><span class="skill-name">Argo Workflows</span><div class="skill-bar"><div class="skill-fill" style="width: 50%"></div></div><span class="skill-level">5/10</span></div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>📊 Monitoring & Observability</h3>
+                    <div class="skill-item"><span class="skill-name">Grafana</span><div class="skill-bar"><div class="skill-fill" style="width: 80%"></div></div><span class="skill-level">8/10</span></div>
+                    <div class="skill-item"><span class="skill-name">Netdata</span><div class="skill-bar"><div class="skill-fill" style="width: 80%"></div></div><span class="skill-level">8/10</span></div>
+                    <div class="skill-item"><span class="skill-name">Prometheus</span><div class="skill-bar"><div class="skill-fill" style="width: 50%"></div></div><span class="skill-level">5/10</span></div>
+                    <div class="skill-item"><span class="skill-name">Alertmanager</span><div class="skill-bar"><div class="skill-fill" style="width: 50%"></div></div><span class="skill-level">5/10</span></div>
+                    <div class="skill-item"><span class="skill-name">DataDog</span><div class="skill-bar"><div class="skill-fill" style="width: 50%"></div></div><span class="skill-level">5/10</span></div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>🔐 Networking & Security</h3>
+                    <div class="skill-item"><span class="skill-name">External Secrets</span><div class="skill-bar"><div class="skill-fill" style="width: 70%"></div></div><span class="skill-level">7/10</span></div>
+                    <div class="skill-item"><span class="skill-name">Traefik</span><div class="skill-bar"><div class="skill-fill" style="width: 70%"></div></div><span class="skill-level">7/10</span></div>
+                    <div class="skill-item"><span class="skill-name">Ingress Nginx</span><div class="skill-bar"><div class="skill-fill" style="width: 60%"></div></div><span class="skill-level">6/10</span></div>
+                    <div class="skill-item"><span class="skill-name">Cert-manager</span><div class="skill-bar"><div class="skill-fill" style="width: 60%"></div></div><span class="skill-level">6/10</span></div>
+                    <div class="skill-item"><span class="skill-name">Zerotier</span><div class="skill-bar"><div class="skill-fill" style="width: 60%"></div></div><span class="skill-level">6/10</span></div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>💾 Data Storage</h3>
+                    <div class="skill-item"><span class="skill-name">GlusterFS</span><div class="skill-bar"><div class="skill-fill" style="width: 70%"></div></div><span class="skill-level">7/10</span></div>
+                    <div class="skill-item"><span class="skill-name">EBS</span><div class="skill-bar"><div class="skill-fill" style="width: 70%"></div></div><span class="skill-level">7/10</span></div>
+                    <div class="skill-item"><span class="skill-name">Object Storage (S3)</span><div class="skill-bar"><div class="skill-fill" style="width: 60%"></div></div><span class="skill-level">6/10</span></div>
+                    <div class="skill-item"><span class="skill-name">Redis</span><div class="skill-bar"><div class="skill-fill" style="width: 50%"></div></div><span class="skill-level">5/10</span></div>
+                    <div class="skill-item"><span class="skill-name">PostgreSQL</span><div class="skill-bar"><div class="skill-fill" style="width: 40%"></div></div><span class="skill-level">4/10</span></div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>💻 Programming & Scripting</h3>
+                    <div class="skill-item"><span class="skill-name">Bash</span><div class="skill-bar"><div class="skill-fill" style="width: 70%"></div></div><span class="skill-level">7/10</span></div>
+                    <div class="skill-item"><span class="skill-name">YAML</span><div class="skill-bar"><div class="skill-fill" style="width: 70%"></div></div><span class="skill-level">7/10</span></div>
+                    <div class="skill-item"><span class="skill-name">Python</span><div class="skill-bar"><div class="skill-fill" style="width: 60%"></div></div><span class="skill-level">6/10</span></div>
+                    <div class="skill-item"><span class="skill-name">Git</span><div class="skill-bar"><div class="skill-fill" style="width: 60%"></div></div><span class="skill-level">6/10</span></div>
+                    <div class="skill-item"><span class="skill-name">HCL</span><div class="skill-bar"><div class="skill-fill" style="width: 30%"></div></div><span class="skill-level">3/10</span></div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>🤖 AI Tools</h3>
+                    <div class="skill-item"><span class="skill-name">Claude (Anthropic)</span><div class="skill-bar"><div class="skill-fill" style="width: 50%"></div></div><span class="skill-level">5/10</span></div>
+                    <div class="skill-item"><span class="skill-name">MCP Protocol</span><div class="skill-bar"><div class="skill-fill" style="width: 40%"></div></div><span class="skill-level">4/10</span></div>
+                    <div class="skill-item"><span class="skill-name">GitHub Copilot</span><div class="skill-bar"><div class="skill-fill" style="width: 40%"></div></div><span class="skill-level">4/10</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            <div class="education-item">
+                <div class="degree">Postgraduate in Cyber Security</div>
+                <div class="school">Lviv State University of Life Safety</div>
+                <div class="year">2017 – 2020</div>
+            </div>
+            <div class="education-item">
+                <div class="degree">Master's Degree in Administrative Management in Information Security</div>
+                <div class="school">Lviv State University of Life Safety</div>
+                <div class="year">2015 – 2016</div>
+            </div>
+            <div class="education-item">
+                <div class="degree">Bachelor's Degree in Information Security Management</div>
+                <div class="school">Lviv State University of Life Safety</div>
+                <div class="year">2011 – 2015</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Languages</h2>
+            <div class="languages">
+                <div class="lang-item">🇺🇦 <strong>Ukrainian</strong> <span>— Native</span></div>
+                <div class="lang-item">🇬🇧 <strong>English</strong> <span>— Professional Working Proficiency</span></div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Volunteer Work</h2>
+            <div class="volunteer">
+                <span class="volunteer-icon">🇺🇦</span>
+                Active volunteer supporting Ukrainian government and military technology initiatives. Contributed to the MOU (Ministry of Defense) project providing secure infrastructure solutions. Available for part-time remote volunteer opportunities in projects supporting Ukraine.
+            </div>
+        </section>
+
+        <footer>
+            <p>Last updated: December 2024</p>
+        </footer>
+    </div>
+</body>
+</html>
