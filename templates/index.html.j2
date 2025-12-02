@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ personal.name }} - {{ personal.title }}</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 50px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        header {
+            text-align: center;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 25px;
+            margin-bottom: 30px;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #1e40af;
+            margin-bottom: 5px;
+        }
+        .subtitle {
+            font-size: 1.2em;
+            color: #64748b;
+            margin-bottom: 15px;
+        }
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            font-size: 0.95em;
+        }
+        .contact-info a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        .contact-info a:hover { text-decoration: underline; }
+        h2 {
+            color: #1e40af;
+            font-size: 1.4em;
+            margin: 30px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        h3 {
+            color: #334155;
+            font-size: 1.1em;
+            margin: 20px 0 5px;
+        }
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: baseline;
+        }
+        .job-title { font-weight: 600; color: #1e40af; }
+        .job-period { color: #64748b; font-size: 0.9em; }
+        .job-location { color: #64748b; font-size: 0.9em; }
+        ul {
+            margin: 10px 0 10px 20px;
+        }
+        li { margin: 5px 0; }
+        .skills-section {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 12px;
+        }
+        .skill-category {
+            background: #f8fafc;
+            padding: 10px 12px;
+            border-radius: 5px;
+            border: 1px solid #e2e8f0;
+        }
+        .skill-category h3 {
+            margin: 0 0 6px 0;
+            color: #1e40af;
+            font-size: 0.85em;
+        }
+        .skill-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: 6px;
+        }
+        .skill-badge {
+            display: inline-block;
+            padding: 3px 8px;
+            background: linear-gradient(135deg, #e0e7ff, #dbeafe);
+            border: 1px solid #93c5fd;
+            border-radius: 12px;
+            font-size: 0.72em;
+            color: #1e40af;
+            white-space: nowrap;
+            font-weight: 500;
+        }
+        .project-card {
+            background: #f8fafc;
+            padding: 15px 20px;
+            margin: 15px 0;
+            border-left: 4px solid #2563eb;
+            border-radius: 0 8px 8px 0;
+        }
+        .project-card h4 {
+            color: #1e40af;
+            margin-bottom: 5px;
+        }
+        .project-tech {
+            font-size: 0.85em;
+            color: #64748b;
+            margin-bottom: 8px;
+        }
+        .education-item {
+            margin: 15px 0;
+            padding-left: 15px;
+            border-left: 3px solid #2563eb;
+        }
+        .degree { font-weight: 600; color: #334155; }
+        .school { color: #64748b; }
+        .year { color: #94a3b8; font-size: 0.9em; }
+        .languages {
+            display: flex;
+            gap: 30px;
+            margin-top: 10px;
+        }
+        .lang-item span { color: #64748b; }
+        .volunteer {
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 3px solid #2563eb;
+            margin-top: 10px;
+            font-size: 0.9em;
+        }
+        .volunteer-icon { font-size: 1.2em; margin-right: 8px; }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+            color: #94a3b8;
+            font-size: 0.9em;
+        }
+        @media print {
+            body { background: white; padding: 0; }
+            .container { box-shadow: none; padding: 20px; }
+            .skills-section { grid-template-columns: repeat(3, 1fr); }
+        }
+        @media (max-width: 900px) {
+            .skills-section { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 600px) {
+            .skills-section { grid-template-columns: 1fr; }
+            .contact-info { flex-direction: column; align-items: center; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>{{ personal.name }}</h1>
+            <div class="subtitle">{{ personal.title }}</div>
+            <div class="contact-info">
+                <span>📧 {{ personal.contact.email }}</span>
+                <span>📱 {{ personal.contact.phone }}</span>
+                <span>📍 {{ personal.contact.location }}</span>
+                <a href="{{ personal.contact.linkedin }}">🔗 LinkedIn</a>
+                <a href="{{ personal.contact.github }}">💻 GitHub</a>
+                <a href="https://github.com/shellshock1953/cv/releases/latest/download/cv_bohdan_sukhomlinov.pdf">📄 PDF</a>
+            </div>
+        </header>
+
+        <section>
+            <h2>Professional Summary</h2>
+            <p>{{ personal.summary }}</p>
+        </section>
+
+        <section>
+            <h2>Technical Skills</h2>
+            <p style="font-size: 0.85em; color: #64748b; margin-bottom: 10px;">Numbers indicate proficiency level (1-10 scale)</p>
+            <div class="skills-section">
+                {% for category in skills.skill_categories %}
+                <div class="skill-category">
+                    <h3>{{ category.emoji }} {{ category.name }}</h3>
+                    <div class="skill-badges">
+                        {% for skill in category.skills %}
+                        <span class="skill-badge">{{ skill.name }} {{ skill.proficiency }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <section>
+            <h2>Experience</h2>
+            {% for job in experience.jobs %}
+            <div class="job-header">
+                <h3><span class="job-title">{{ job.company }}</span> — {{ job.role }}</h3>
+                <span class="job-period">{{ job.period }}</span>
+            </div>
+            <div class="job-location">{{ job.location }}{% if job.note %} ({{ job.note }}){% endif %}</div>
+            <ul>
+                {% for responsibility in job.responsibilities %}
+                <li>{{ responsibility }}</li>
+                {% endfor %}
+            </ul>
+            {% endfor %}
+        </section>
+
+        <section>
+            <h2>Projects</h2>
+            {% for project in projects.projects %}
+            <div class="project-card">
+                <h4>{{ project.emoji }} {{ project.name }}{% if project.note %} — {{ project.note }}{% endif %}</h4>
+                <div class="project-tech">{{ project.technologies | join(', ') }}</div>
+                <p>{{ project.description | trim }}</p>
+            </div>
+            {% endfor %}
+        </section>
+
+        <section>
+            <h2>Open Source Projects</h2>
+            <ul style="list-style: none; padding: 0; margin: 10px 0;">
+            {% for project in opensource.projects %}
+                <li style="margin: 8px 0; font-size: 0.9em;">
+                    {{ project.emoji }} <a href="{{ project.url }}" target="_blank" style="color: #2563eb; text-decoration: none; font-weight: 500;">{{ project.name }}</a>
+                    <span style="color: #64748b; font-size: 0.85em;"> — {{ project.description | trim }}</span>
+                </li>
+            {% endfor %}
+            </ul>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            {% for degree in education.degrees %}
+            <div class="education-item">
+                <div class="degree">{{ degree.degree }}</div>
+                <div class="school">{{ degree.school }}</div>
+                <div class="year">{{ degree.period }}</div>
+            </div>
+            {% endfor %}
+        </section>
+
+        <section>
+            <h2>Languages</h2>
+            <div class="languages">
+                {% for lang in languages.languages %}
+                <div class="lang-item">{{ lang.emoji }} <strong>{{ lang.language }}</strong> <span>— {{ lang.proficiency }}</span></div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <section>
+            <h2>Volunteer Work</h2>
+            <div class="volunteer">
+                <span class="volunteer-icon">{{ volunteer.emoji }}</span>
+                {{ volunteer.description | trim }}
+            </div>
+        </section>
+
+        <footer>
+            <p>Last updated: {{ updated_date }}</p>
+            <p style="margin-top: 8px; font-size: 0.85em; color: #94a3b8;">
+                This CV is automatically generated •
+                <a href="https://github.com/shellshock1953/cv" target="_blank" style="color: #64748b; text-decoration: none;">View source on GitHub</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

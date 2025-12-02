@@ -1,0 +1,41 @@
+name: Release
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+
+jobs:
+  update-skills:
+    name: Update Skills from Notion
+    uses: ./.github/workflows/update-skills.yml
+    secrets: inherit
+
+  generate-html:
+    name: Generate HTML
+    needs: update-skills
+    uses: ./.github/workflows/generate-html.yml
+    secrets: inherit
+
+  generate-pdf:
+    name: Generate PDF
+    needs: generate-html
+    uses: ./.github/workflows/generate-pdf.yml
+    secrets: inherit
+    with:
+      release_tag: ${{ github.event.release.tag_name }}
+
+  summary:
+    name: Release Summary
+    needs: [generate-html, generate-pdf]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Summary
+        run: |
+          echo "✅ Release ${{ github.event.release.tag_name }} complete!"
+          echo "📝 Skills updated from Notion"
+          echo "🌐 HTML generated and committed to main"
+          echo "📄 PDF attached to release"
+          echo "🚀 GitHub Pages deployment will trigger automatically from main branch push"

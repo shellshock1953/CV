@@ -1,0 +1,50 @@
+projects:
+  - name: Open Procurement System
+    emoji: 🇺🇦
+    technologies:
+      - AWS
+      - Python
+      - Bash
+      - GitLab CI
+      - Ansible
+      - Terraform
+      - ELK
+      - Netdata
+      - Grafana
+    description: |
+      Architected and maintained public electronic procurement system infrastructure serving millions of transactions for municipal customers conducting transparent procurement processes. Platform became a model for government digitalization.
+
+  - name: Enterprice Logistics
+    emoji: 🚚
+    technologies:
+      - AWS
+      - Azure
+      - Kubernetes
+      - Jenkins
+      - GitHub Actions
+    description: |
+      Engineered and scaled global cargo protection platform infrastructure providing real-time visibility, risk management, and recovery services for supply chain security across international logistics networks.
+
+  - name: Ukrainian Defense Support Project
+    emoji: 🎖️
+    note: Volunteer
+    technologies:
+      - AWS
+      - ECS
+      - GitHub Actions
+      - Terraform
+      - Terragrunt
+    description: |
+      Architected and maintained highly secure, scalable infrastructure for critical defense operations.
+
+  - name: Appelsin
+    emoji: 🍎
+    note: Student Mentorship
+    technologies:
+      - Node.js
+      - Python
+      - GitHub Actions
+      - Argo Workflows
+      - Kubernetes (Talos + AWS self-managed)
+    description: |
+      Mentored students through practical DevOps project implementation, teaching modern cloud-native development practices and GitOps workflows.

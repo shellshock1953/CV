@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bohdan Sukhomlinov - DevOps Engineer | Platform Engineer | SRE</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 50px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        header {
+            text-align: center;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 25px;
+            margin-bottom: 30px;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #1e40af;
+            margin-bottom: 5px;
+        }
+        .subtitle {
+            font-size: 1.2em;
+            color: #64748b;
+            margin-bottom: 15px;
+        }
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            font-size: 0.95em;
+        }
+        .contact-info a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        .contact-info a:hover { text-decoration: underline; }
+        h2 {
+            color: #1e40af;
+            font-size: 1.4em;
+            margin: 30px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        h3 {
+            color: #334155;
+            font-size: 1.1em;
+            margin: 20px 0 5px;
+        }
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: baseline;
+        }
+        .job-title { font-weight: 600; color: #1e40af; }
+        .job-period { color: #64748b; font-size: 0.9em; }
+        .job-location { color: #64748b; font-size: 0.9em; }
+        ul {
+            margin: 10px 0 10px 20px;
+        }
+        li { margin: 5px 0; }
+        .skills-section {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 12px;
+        }
+        .skill-category {
+            background: #f8fafc;
+            padding: 10px 12px;
+            border-radius: 5px;
+            border: 1px solid #e2e8f0;
+        }
+        .skill-category h3 {
+            margin: 0 0 6px 0;
+            color: #1e40af;
+            font-size: 0.85em;
+        }
+        .skill-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: 6px;
+        }
+        .skill-badge {
+            display: inline-block;
+            padding: 3px 8px;
+            background: linear-gradient(135deg, #e0e7ff, #dbeafe);
+            border: 1px solid #93c5fd;
+            border-radius: 12px;
+            font-size: 0.72em;
+            color: #1e40af;
+            white-space: nowrap;
+            font-weight: 500;
+        }
+        .project-card {
+            background: #f8fafc;
+            padding: 15px 20px;
+            margin: 15px 0;
+            border-left: 4px solid #2563eb;
+            border-radius: 0 8px 8px 0;
+        }
+        .project-card h4 {
+            color: #1e40af;
+            margin-bottom: 5px;
+        }
+        .project-tech {
+            font-size: 0.85em;
+            color: #64748b;
+            margin-bottom: 8px;
+        }
+        .education-item {
+            margin: 15px 0;
+            padding-left: 15px;
+            border-left: 3px solid #2563eb;
+        }
+        .degree { font-weight: 600; color: #334155; }
+        .school { color: #64748b; }
+        .year { color: #94a3b8; font-size: 0.9em; }
+        .languages {
+            display: flex;
+            gap: 30px;
+            margin-top: 10px;
+        }
+        .lang-item span { color: #64748b; }
+        .volunteer {
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 3px solid #2563eb;
+            margin-top: 10px;
+            font-size: 0.9em;
+        }
+        .volunteer-icon { font-size: 1.2em; margin-right: 8px; }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+            color: #94a3b8;
+            font-size: 0.9em;
+        }
+        @media print {
+            body { background: white; padding: 0; }
+            .container { box-shadow: none; padding: 20px; }
+            .skills-section { grid-template-columns: repeat(3, 1fr); }
+        }
+        @media (max-width: 900px) {
+            .skills-section { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 600px) {
+            .skills-section { grid-template-columns: 1fr; }
+            .contact-info { flex-direction: column; align-items: center; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Bohdan Sukhomlinov</h1>
+            <div class="subtitle">DevOps Engineer | Platform Engineer | SRE</div>
+            <div class="contact-info">
+                <span>📧 shellshock.dnull@gmail.com</span>
+                <span>📱 +380952176437</span>
+                <span>📍 Lviv, Ukraine</span>
+                <a href="https://www.linkedin.com/in/shellshock-dnull/">🔗 LinkedIn</a>
+                <a href="https://github.com/shellshock1953">💻 GitHub</a>
+                <a href="https://github.com/shellshock1953/cv/releases/latest/download/cv_bohdan_sukhomlinov.pdf">📄 PDF</a>
+            </div>
+        </header>
+
+        <section>
+            <h2>Professional Summary</h2>
+            <p>DevOps Engineer with 11+ years in IT (including bare-metal systems), progressing from Systems Administrator through DevOps to SRE and Platform Engineering roles. Specialized in cloud-native infrastructure with AWS (9+ years), Kubernetes (6+ years), and Azure (4+ years). Led enterprise-scale migration of legacy systems to Kubernetes, achieving zero-downtime deployments during major infrastructure refactors and implementing reactive autoscaling for optimal resource utilization. Strong advocate for open source with active contributions, experienced educator, and dedicated volunteer supporting Ukrainian government and military projects.
+</p>
+        </section>
+
+        <section>
+            <h2>Technical Skills</h2>
+            <p style="font-size: 0.85em; color: #64748b; margin-bottom: 10px;">Numbers indicate proficiency level (1-10 scale)</p>
+            <div class="skills-section">
+                <div class="skill-category">
+                    <h3>🤖 AI Tools</h3>
+                    <div class="skill-badges">
+                        <span class="skill-badge">Claude 7</span>
+                        <span class="skill-badge">gemini 6</span>
+                        <span class="skill-badge">MCP (Model Context Protocol) 4</span>
+                        <span class="skill-badge">Copilot 4</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>🔄 CI/CD</h3>
+                    <div class="skill-badges">
+                        <span class="skill-badge">ArgoCD 8</span>
+                        <span class="skill-badge">Gitlab CI 7</span>
+                        <span class="skill-badge">Github Actions 7</span>
+                        <span class="skill-badge">Argo Workflows 6</span>
+                        <span class="skill-badge">Jenkins 6</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>☁️ Cloud Providers and Services</h3>
+                    <div class="skill-badges">
+                        <span class="skill-badge">Github 7</span>
+                        <span class="skill-badge">Symbiosis 7</span>
+                        <span class="skill-badge">AWS 7</span>
+                        <span class="skill-badge">Gitlab 6</span>
+                        <span class="skill-badge">Azure 6</span>
+                        <span class="skill-badge">Oracle 4</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>📝 Configuration Templating and Init</h3>
+                    <div class="skill-badges">
+                        <span class="skill-badge">Helm 6</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>💾 Data Storage and Databases</h3>
+                    <div class="skill-badges">
+                        <span class="skill-badge">GlusterFS 7</span>
+                        <span class="skill-badge">EBS 7</span>
+                        <span class="skill-badge">Ceph 6</span>
+                        <span class="skill-badge">Object Storage 6</span>
+                        <span class="skill-badge">Velero 5</span>
+                        <span class="skill-badge">Redis 5</span>
+                        <span class="skill-badge">PostgreSQL 5</span>
+                        <span class="skill-badge">Longhorn 5</span>
+                        <span class="skill-badge">XFS 4</span>
+                        <span class="skill-badge">TrueNAS 4</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>🖥️ Hardware</h3>
+                    <div class="skill-badges">
+                        <span class="skill-badge">Servers 7</span>
+                        <span class="skill-badge">Raspberry RPi 5</span>
+                        <span class="skill-badge">Steam Deck  4</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>🏗️ Infrastructure as Code</h3>
+                    <div class="skill-badges">
+                        <span class="skill-badge">Ansible 8</span>
+                        <span class="skill-badge">Terragrunt 6</span>
+                        <span class="skill-badge">Terraform 6</span>
+                        <span class="skill-badge">Pulumi 4</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>📊 Monitoring and Logging</h3>
+                    <div class="skill-badges">
+                        <span class="skill-badge">Grafana 8</span>
+                        <span class="skill-badge">Netdata 8</span>
+                        <span class="skill-badge">DataDog 7</span>
+                        <span class="skill-badge">Prometheus 6</span>
+                        <span class="skill-badge">Alertmanager 6</span>
+                        <span class="skill-badge">Loki 6</span>
+                        <span class="skill-badge">Uptime-Kuma 6</span>
+                        <span class="skill-badge">ntfy 5</span>
+                        <span class="skill-badge">ActualBudget 5</span>
+                        <span class="skill-badge">Dashy 5</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>🔐 Networking and Security</h3>
+                    <div class="skill-badges">
+                        <span class="skill-badge">external-secrets 8</span>
+                        <span class="skill-badge">Traefik 7</span>
+                        <span class="skill-badge">LastPass 7</span>
+                        <span class="skill-badge">Certmanager 6</span>
+                        <span class="skill-badge">Ingress Nginx 6</span>
+                        <span class="skill-badge">zerotier 6</span>
+                        <span class="skill-badge">DNS and Domains 6</span>
+                        <span class="skill-badge">Tailscale 5</span>
+                        <span class="skill-badge">LetsEncrypt 5</span>
+                        <span class="skill-badge">LocalSend 5</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>⚙️ Orchestration and Cluster Management</h3>
+                    <div class="skill-badges">
+                        <span class="skill-badge">docker-compose 8</span>
+                        <span class="skill-badge">KUBERNETES 8</span>
+                        <span class="skill-badge">KEDA 6</span>
+                        <span class="skill-badge">Cluster Autoscaler 6</span>
+                        <span class="skill-badge">Reflector 6</span>
+                        <span class="skill-badge">Proxmox 6</span>
+                        <span class="skill-badge">microk8s 6</span>
+                        <span class="skill-badge">Argo Rollout 5</span>
+                        <span class="skill-badge">permission-manager 5</span>
+                        <span class="skill-badge">Talos 5</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>💻 Programming Languages and Frameworks</h3>
+                    <div class="skill-badges">
+                        <span class="skill-badge">YAML 7</span>
+                        <span class="skill-badge">Bash 7</span>
+                        <span class="skill-badge">Git 6</span>
+                        <span class="skill-badge">Python 6</span>
+                        <span class="skill-badge">Hugo 4</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>🛠️ Utils</h3>
+                    <div class="skill-badges">
+                        <span class="skill-badge">SSH 8</span>
+                        <span class="skill-badge">synergy 7</span>
+                        <span class="skill-badge">dmenu 7</span>
+                        <span class="skill-badge">zsh 7</span>
+                        <span class="skill-badge">neoVIM 7</span>
+                        <span class="skill-badge">alacrity 7</span>
+                        <span class="skill-badge">pre-commit 7</span>
+                        <span class="skill-badge">Notion 7</span>
+                        <span class="skill-badge">i3wm 7</span>
+                        <span class="skill-badge">rofi 6</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Experience</h2>
+            <div class="job-header">
+                <h3><span class="job-title">SoftServe</span> — DevOps Engineer</h3>
+                <span class="job-period">July 2019 – Present</span>
+            </div>
+            <div class="job-location">Lviv, Ukraine</div>
+            <ul>
+                <li>Architected and maintained multi-cloud infrastructure across AWS and Azure environments</li>
+                <li>Implemented GitOps workflows using ArgoCD, Argo Workflows, and Argo Events for continuous deployment</li>
+                <li>Orchestrated self-hosted and SaaS Kubernetes clusters (EKS, AKS, Talos) with advanced autoscaling strategies</li>
+                <li>Engineered Infrastructure as Code solutions using Terraform and Pulumi</li>
+                <li>Established CI/CD pipelines with GitHub Actions, GitLab CI, and Jenkins</li>
+            </ul>
+            <div class="job-header">
+                <h3><span class="job-title">Lviv State University of Life Safety</span> — Student Teacher</h3>
+                <span class="job-period">Sep 2019 – Jun 2020</span>
+            </div>
+            <div class="job-location">Lviv, Ukraine (Part-time)</div>
+            <ul>
+                <li>Delivered courses on Linux Operating Systems and system administration</li>
+                <li>Taught Relational Databases with focus on PostgreSQL</li>
+                <li>Instructed Python programming and cybersecurity fundamentals</li>
+                <li>Mentored students on practical DevOps and security concepts</li>
+            </ul>
+            <div class="job-header">
+                <h3><span class="job-title">Quintagroup</span> — DevOps Engineer</h3>
+                <span class="job-period">Jan 2017 – Jun 2019</span>
+            </div>
+            <div class="job-location">Lviv, Ukraine</div>
+            <ul>
+                <li>Architected and automated infrastructure for Prozorro and Prozorro Sale public procurement platforms</li>
+                <li>Engineered configuration management solutions using Ansible</li>
+                <li>Implemented Infrastructure as Code with Terraform on AWS</li>
+                <li>Designed and deployed comprehensive monitoring and alerting systems using ELK stack and Netdata</li>
+            </ul>
+            <div class="job-header">
+                <h3><span class="job-title">UARNet</span> — System Administrator</h3>
+                <span class="job-period">Jul 2014 – Nov 2016</span>
+            </div>
+            <div class="job-location">Lviv, Ukraine</div>
+            <ul>
+                <li>Administered bare-metal server infrastructure for ISP operations</li>
+                <li>Managed DNS, Mail, and Hosting services for colocation clients</li>
+                <li>Operated domain reseller services and provided technical support</li>
+                <li>Maintained high-availability infrastructure for critical network services</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Projects</h2>
+            <div class="project-card">
+                <h4>🇺🇦 Open Procurement System</h4>
+                <div class="project-tech">AWS, Python, Bash, GitLab CI, Ansible, Terraform, ELK, Netdata, Grafana</div>
+                <p>Architected and maintained public electronic procurement system infrastructure serving millions of transactions for municipal customers conducting transparent procurement processes. Platform became a model for government digitalization.</p>
+            </div>
+            <div class="project-card">
+                <h4>🚚 Enterprice Logistics</h4>
+                <div class="project-tech">AWS, Azure, Kubernetes, Jenkins, GitHub Actions</div>
+                <p>Engineered and scaled global cargo protection platform infrastructure providing real-time visibility, risk management, and recovery services for supply chain security across international logistics networks.</p>
+            </div>
+            <div class="project-card">
+                <h4>🎖️ Ukrainian Defense Support Project — Volunteer</h4>
+                <div class="project-tech">AWS, ECS, GitHub Actions, Terraform, Terragrunt</div>
+                <p>Architected and maintained highly secure, scalable infrastructure for critical defense operations.</p>
+            </div>
+            <div class="project-card">
+                <h4>🍎 Appelsin — Student Mentorship</h4>
+                <div class="project-tech">Node.js, Python, GitHub Actions, Argo Workflows, Kubernetes (Talos + AWS self-managed)</div>
+                <p>Mentored students through practical DevOps project implementation, teaching modern cloud-native development practices and GitOps workflows.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Open Source Projects</h2>
+            <ul style="list-style: none; padding: 0; margin: 10px 0;">
+                <li style="margin: 8px 0; font-size: 0.9em;">
+                    🎭 <a href="https://galaxy.ansible.com/ui/standalone/roles/shellshock1953/components/" target="_blank" style="color: #2563eb; text-decoration: none; font-weight: 500;">Ansible Role - Components</a>
+                    <span style="color: #64748b; font-size: 0.85em;"> — Ansible role for managing system components</span>
+                </li>
+                <li style="margin: 8px 0; font-size: 0.9em;">
+                    💰 <a href="https://github.com/dnullproject/mono-to-actualbudget" target="_blank" style="color: #2563eb; text-decoration: none; font-weight: 500;">Mono to ActualBudget</a>
+                    <span style="color: #64748b; font-size: 0.85em;"> — JavaScript project to sync Monobank (Ukraine) with self-hosted ActualBudget</span>
+                </li>
+                <li style="margin: 8px 0; font-size: 0.9em;">
+                    🔌 <a href="https://github.com/dnullproject/haltoping" target="_blank" style="color: #2563eb; text-decoration: none; font-weight: 500;">Haltoping</a>
+                    <span style="color: #64748b; font-size: 0.85em;"> — Script to gracefully shutdown bare-metal servers on power outage</span>
+                </li>
+                <li style="margin: 8px 0; font-size: 0.9em;">
+                    🍊 <a href="https://github.com/orgs/softserve-appelsin/repositories" target="_blank" style="color: #2563eb; text-decoration: none; font-weight: 500;">SoftServe Appelsin</a>
+                    <span style="color: #64748b; font-size: 0.85em;"> — Student-driven project to showcase Software Development Lifecycle (SDLC)</span>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            <div class="education-item">
+                <div class="degree">Postgraduate in Cyber Security</div>
+                <div class="school">Lviv State University of Life Safety</div>
+                <div class="year">2017 – 2020</div>
+            </div>
+            <div class="education-item">
+                <div class="degree">Master's Degree in Administrative Management in Information Security</div>
+                <div class="school">Lviv State University of Life Safety</div>
+                <div class="year">2015 – 2016</div>
+            </div>
+            <div class="education-item">
+                <div class="degree">Bachelor's Degree in Information Security Management</div>
+                <div class="school">Lviv State University of Life Safety</div>
+                <div class="year">2011 – 2015</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Languages</h2>
+            <div class="languages">
+                <div class="lang-item">🇺🇦 <strong>Ukrainian</strong> <span>— Native</span></div>
+                <div class="lang-item">🇬🇧 <strong>English</strong> <span>— Professional Working Proficiency</span></div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Volunteer Work</h2>
+            <div class="volunteer">
+                <span class="volunteer-icon">🇺🇦</span>
+                Active volunteer supporting Ukrainian government and military technology initiatives. Available for part-time remote volunteer opportunities in projects supporting Ukraine.
+            </div>
+        </section>
+
+        <footer>
+            <p>Last updated: December 2025</p>
+            <p style="margin-top: 8px; font-size: 0.85em; color: #94a3b8;">
+                This CV is automatically generated •
+                <a href="https://github.com/shellshock1953/cv" target="_blank" style="color: #64748b; text-decoration: none;">View source on GitHub</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
