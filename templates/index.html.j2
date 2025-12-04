@@ -194,6 +194,7 @@
                 <span>📍 {{ personal.contact.location }}</span>
                 <a href="{{ personal.contact.linkedin }}">🔗 LinkedIn</a>
                 <a href="{{ personal.contact.github }}">💻 GitHub</a>
+                <a href="https://github.com/shellshock1953/cv/releases/latest/download/cv_bohdan_sukhomlinov.pdf">📄 PDF</a>
             </div>
         </header>
 
@@ -227,6 +228,18 @@
                 <p>{{ project.description | trim }}</p>
             </div>
             {% endfor %}
+        </section>
+
+        <section>
+            <h2>Open Source Projects</h2>
+            <ul style="list-style: none; padding: 0; margin: 10px 0;">
+            {% for project in opensource.projects %}
+                <li style="margin: 8px 0; font-size: 0.9em;">
+                    {{ project.emoji }} <a href="{{ project.url }}" target="_blank" style="color: #2563eb; text-decoration: none; font-weight: 500;">{{ project.name }}</a>
+                    <span style="color: #64748b; font-size: 0.85em;"> — {{ project.description | trim }}</span>
+                </li>
+            {% endfor %}
+            </ul>
         </section>
 
         <section>
@@ -279,6 +292,10 @@
 
         <footer>
             <p>Last updated: {{ updated_date }}</p>
+            <p style="margin-top: 8px; font-size: 0.85em; color: #94a3b8;">
+                This CV is automatically generated •
+                <a href="https://github.com/shellshock1953/cv" target="_blank" style="color: #64748b; text-decoration: none;">View source on GitHub</a>
+            </p>
         </footer>
     </div>
 </body>

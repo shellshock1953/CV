@@ -23,6 +23,7 @@ DATA_FILES = {
     "personal": "personal.yaml",
     "experience": "experience.yaml",
     "projects": "projects.yaml",
+    "opensource": "opensource.yaml",
     "skills": "skills.yaml",
     "education": "education.yaml",
     "languages": "languages.yaml",

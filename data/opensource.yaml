@@ -1,0 +1,36 @@
+projects:
+  - name: Ansible Role - Components
+    emoji: 🎭
+    url: https://galaxy.ansible.com/ui/standalone/roles/shellshock1953/components/
+    description: Ansible role for managing system components
+    technologies:
+      - Ansible
+      - Infrastructure as Code
+
+  - name: Mono to ActualBudget
+    emoji: 💰
+    url: https://github.com/dnullproject/mono-to-actualbudget
+    description: JavaScript project to sync Monobank (Ukraine) with self-hosted ActualBudget
+    technologies:
+      - JavaScript
+      - Node.js
+      - Banking API
+      - Self-hosted
+
+  - name: Haltoping
+    emoji: 🔌
+    url: https://github.com/dnullproject/haltoping
+    description: Script to gracefully shutdown bare-metal servers on power outage
+    technologies:
+      - Python
+      - Bash
+      - System Administration
+
+  - name: SoftServe Appelsin
+    emoji: 🍊
+    url: https://github.com/orgs/softserve-appelsin/repositories
+    description: Student-driven project to showcase Software Development Lifecycle (SDLC)
+    technologies:
+      - Education
+      - Mentorship
+      - Full Stack
