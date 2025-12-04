@@ -3,132 +3,75 @@
 **Senior DevOps Engineer | Platform Engineer | SRE**
 
 🌐 **Live Site:** [cv.dnull.systems](https://cv.dnull.systems)
+📄 **Latest PDF:** [Download CV](https://github.com/shellshock1953/cv/releases/latest/download/cv_bohdan_sukhomlinov.pdf)
 
 ---
 
 ## Overview
 
-This repository contains my professional CV/resume, built with an automated template-based generation system. The site combines:
+Automated CV/resume system with Notion integration for skills and GitHub Actions for deployment.
 
-- **Local YAML files** for experience, projects, education (version-controlled)
-- **Notion Database** for technical skills (auto-synced)
-- **Jinja2 Templates** for HTML generation
-- **GitHub Actions** for automated deployment
-- **GitHub Pages** for hosting
+**Stack:** YAML + Jinja2 + Notion API + GitHub Actions + GitHub Pages
 
 ## Quick Start
 
-### Local Development
+```bash
+# Install dependencies
+pip install -r requirements.txt
 
-1. **Install dependencies:**
-   ```bash
-   pip install -r requirements.txt
-   ```
+# Generate HTML
+python scripts/generate_html.py
 
-2. **Generate HTML:**
-   ```bash
-   python scripts/generate_html.py
-   ```
+# Fetch skills from Notion
+export NOTION_API_KEY="your_token"
+python scripts/fetch_notion_skills.py
+```
 
-3. **Fetch skills from Notion:**
-   ```bash
-   export NOTION_API_KEY="your_notion_api_key"
-   python scripts/fetch_notion_skills.py
-   ```
+## Making Updates
 
-### Making Updates
+**Update content:** Edit YAML files in `data/` → Commit to main → Run "Generate HTML" workflow
 
-**To update CV content:**
-1. Edit the appropriate YAML file in `data/`
-2. Commit and push to `main`
-3. Run "Generate HTML" workflow manually OR create a release
+**Update skills:** Modify [Notion database](https://www.notion.so/dnull/ce553f61f831464eb05592124282802f) → Run "Update Skills" workflow
 
-**To update technical skills:**
-1. Update skills in [Notion database](https://www.notion.so/dnull/ce553f61f831464eb05592124282802f)
-2. Run "Update Skills from Notion" workflow manually OR create a release
-
-**To trigger a full build and deployment:**
-1. Create a new GitHub release (semantic versioning recommended)
-2. Workflows automatically:
-   - Update skills from Notion
-   - Generate index.html
-   - Create PDF
-   - Deploy to GitHub Pages
-   - Attach PDF to release
+**Full deployment:** Create GitHub release (`v0.0.x`) → Automated pipeline:
+1. Fetches skills from Notion (top 8/category, excludes 0 proficiency)
+2. Generates index.html
+3. Creates PDF (attached to release)
+4. Deploys to GitHub Pages
 
 ## Architecture
 
 ```
-cv/
-├── data/                       # Edit YAML files here to update CV
-│   ├── personal.yaml
-│   ├── experience.yaml
-│   ├── projects.yaml
-│   ├── skills.yaml             # Auto-generated from Notion
-│   ├── education.yaml
-│   ├── languages.yaml
-│   └── volunteer.yaml
-├── scripts/
-│   ├── fetch_notion_skills.py  # Notion → skills.yaml
-│   └── generate_html.py        # YAML + Template → index.html
-├── templates/
-│   └── index.html.j2           # Jinja2 template
-├── .github/workflows/
-│   ├── update-skills.yml       # Reusable workflow
-│   ├── generate-html.yml       # Reusable workflow
-│   ├── generate-pdf.yml        # Reusable workflow
-│   └── release.yml             # Orchestrator
-└── index.html                  # Generated (DO NOT EDIT)
+Notion DB + Local YAML → Jinja2 Template → index.html → GitHub Pages
+                                         ↓
+                                   PDF (release asset)
 ```
 
-## Workflows
-
-### Individual Workflows (Manual Trigger)
-
-- **Update Skills** - Fetch skills from Notion
-- **Generate HTML** - Render template with YAML data
-- **Generate PDF** - Convert HTML to PDF
-
-### Release Workflow (Automatic)
-
-Triggered on GitHub release creation:
-1. Updates skills from Notion
-2. Generates index.html
-3. Creates PDF
-4. Deploys to GitHub Pages
-5. Attaches PDF to release
+**Key Files:**
+- `data/*.yaml` - CV content (edit these)
+- `data/skills.yaml` - Auto-generated from Notion
+- `templates/index.html.j2` - Jinja2 template (2-column compact grid)
+- `scripts/fetch_notion_skills.py` - Notion sync (top 8 per category)
+- `scripts/generate_html.py` - HTML generator
+- `.github/workflows/*.yml` - Automated workflows
 
 ## Features
 
-- **Automated Content Pipeline** - Edit YAML → Generate HTML → Deploy
-- **Notion Integration** - Skills auto-sync from Notion database
-- **PDF Generation** - Professional PDF attached to releases
-- **GitHub Pages Hosting** - Custom domain support
-- **Responsive Design** - Mobile-friendly and print-optimized
-- **Separation of Concerns** - Modular workflows for maintainability
+✅ Notion integration for skills (auto-sync, excludes 0 proficiency)
+✅ PDF generation via Playwright (attached to releases)
+✅ Compact 2-column grid design (0.75em fonts, tight spacing)
+✅ Responsive layout (breakpoints: 900px, 600px)
+✅ Modular GitHub Actions workflows
+✅ Custom domain (cv.dnull.systems)
 
-## Skills System
+## Required Secrets
 
-Technical skills are maintained in a [Notion database](https://www.notion.so/dnull/ce553f61f831464eb05592124282802f) with:
-- **Name** - Technology/tool name
-- **Category** - Skill grouping
-- **Proficiency** - 1-10 rating
+- `NOTION_API_KEY` - Notion integration token
+- `PAT_TOKEN` - Personal Access Token (repo + workflow scopes)
 
-The automation fetches the top 10 skills per category (sorted by proficiency) and generates `data/skills.yaml`.
+## Tech Stack
 
-## Technologies Used
-
-- **Template Engine:** Jinja2
-- **Data Format:** YAML
-- **CI/CD:** GitHub Actions
-- **PDF Generation:** Playwright/Chromium
-- **Integration:** Notion API
-- **Hosting:** GitHub Pages
-- **Domain:** cv.dnull.systems
-
-## License
-
-Personal CV repository - all rights reserved.
+Jinja2 • YAML • Notion API • GitHub Actions • Playwright • GitHub Pages
 
 ---
 

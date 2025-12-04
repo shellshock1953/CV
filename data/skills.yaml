@@ -3,16 +3,20 @@ skill_categories:
   emoji: 🤖
   skills:
   - name: Claude
-    proficiency: 5
+    proficiency: 7
+  - name: gemini
+    proficiency: 6
   - name: MCP (Model Context Protocol)
+    proficiency: 4
+  - name: Copilot
     proficiency: 4
 - name: CI/CD
   emoji: 🔄
   skills:
   - name: ArgoCD
-    proficiency: 7
+    proficiency: 8
   - name: Argo Workflows
-    proficiency: 5
+    proficiency: 6
   - name: Make.com
     proficiency: 2
   - name: Ansible Event-Driven
@@ -35,6 +39,10 @@ skill_categories:
   skills:
   - name: Helm
     proficiency: 6
+  - name: systemd
+    proficiency: 3
+  - name: Tini
+    proficiency: 1
   - name: Timoni
     proficiency: 1
 - name: Data Storage and Databases
@@ -42,91 +50,93 @@ skill_categories:
   skills:
   - name: GlusterFS
     proficiency: 7
+  - name: Ceph
+    proficiency: 6
   - name: Object Storage
     proficiency: 6
+  - name: Velero
+    proficiency: 5
   - name: Redis
     proficiency: 5
-  - name: Ceph
+  - name: PostgreSQL
     proficiency: 5
   - name: XFS
     proficiency: 4
   - name: TrueNAS
     proficiency: 4
-  - name: PostgreSQL
-    proficiency: 4
-  - name: Velero
-    proficiency: 3
 - name: Hardware
   emoji: 🖥️
   skills:
   - name: Servers
     proficiency: 7
+  - name: Keyboard
+    proficiency: 3
+  - name: Android
+    proficiency: 3
 - name: Infrastructure as Code
   emoji: 🏗️
   skills:
   - name: Ansible
     proficiency: 8
+  - name: Terragrunt
+    proficiency: 6
   - name: Pulumi
     proficiency: 4
-  - name: Terragrunt
-    proficiency: 3
 - name: Monitoring and Logging
   emoji: 📊
   skills:
   - name: Grafana
     proficiency: 8
   - name: Prometheus
-    proficiency: 5
+    proficiency: 6
   - name: Alertmanager
-    proficiency: 5
-  - name: ntfy
-    proficiency: 4
+    proficiency: 6
   - name: Loki
-    proficiency: 4
+    proficiency: 6
+  - name: ntfy
+    proficiency: 5
   - name: ActualBudget
-    proficiency: 3
+    proficiency: 5
   - name: Logstash
-    proficiency: 3
-  - name: Uptime-Kuma
-    proficiency: 1
+    proficiency: 4
 - name: Networking and Security
   emoji: 🔐
   skills:
   - name: external-secrets
-    proficiency: 7
+    proficiency: 8
   - name: Certmanager
     proficiency: 6
   - name: Ingress Nginx
     proficiency: 6
   - name: Tailscale
     proficiency: 5
+  - name: LetsEncrypt
+    proficiency: 5
   - name: LocalSend
     proficiency: 5
-  - name: Mikrotik
-    proficiency: 5
-  - name: cloudflare
-    proficiency: 3
   - name: Keycloak
-    proficiency: 2
+    proficiency: 4
+  - name: socat
+    proficiency: 4
 - name: Orchestration and Cluster Management
   emoji: ⚙️
   skills:
   - name: docker-compose
     proficiency: 8
+  - name: KEDA
+    proficiency: 6
   - name: Cluster Autoscaler
     proficiency: 6
-  - name: KEDA
-    proficiency: 5
   - name: Reflector
-    proficiency: 5
-  - name: kasm
-    proficiency: 5
+    proficiency: 6
+  - name: Proxmox
+    proficiency: 6
   - name: Argo Rollout
-    proficiency: 4
-  - name: kubeadm
-    proficiency: 4
+    proficiency: 5
   - name: permission-manager
-    proficiency: 4
+    proficiency: 5
+  - name: Talos
+    proficiency: 5
 - name: Programming Languages and Frameworks
   emoji: 💻
   skills:
