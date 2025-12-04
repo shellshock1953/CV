@@ -1,9 +1,8 @@
 projects:
-  - name: Prozorro / Prozorro Sale
+  - name: Open Procurement System
     emoji: 🇺🇦
     technologies:
       - AWS
-      - DeNovo Cloud
       - Python
       - Bash
       - GitLab CI
@@ -13,9 +12,9 @@ projects:
       - Netdata
       - Grafana
     description: |
-      Public electronic procurement system for Ukrainian state and municipal customers to announce tenders and conduct transparent procurement processes. Served millions of transactions and became a model for government digitalization.
+      Public electronic procurement system for municipal customers to announce tenders and conduct transparent procurement processes. Served millions of transactions and became a model for government digitalization.
 
-  - name: Overhaul
+  - name: Enterprice Logistics
     emoji: 🚚
     technologies:
       - AWS
@@ -26,7 +25,7 @@ projects:
     description: |
       Global cargo protection platform providing real-time visibility, risk management, and recovery services for supply chain security across international logistics networks.
 
-  - name: MOU (Ministry of Defense Ukraine)
+  - name: Ukrainian Defense Support Project
     emoji: 🎖️
     note: Volunteer
     technologies:
@@ -36,7 +35,7 @@ projects:
       - Terraform
       - Terragrunt
     description: |
-      Volunteer project supporting Ukrainian military forces with secure, scalable infrastructure for critical operations.
+      Volunteer project, highly secure, scalable infrastructure for critical operations.
 
   - name: Appelsin
     emoji: 🍎
