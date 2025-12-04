@@ -27,9 +27,15 @@ jobs:
     with:
       release_tag: ${{ github.event.release.tag_name }}
 
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: generate-html
+    uses: ./.github/workflows/deploy.yml
+    secrets: inherit
+
   summary:
     name: Release Summary
-    needs: [generate-html, generate-pdf]
+    needs: [generate-html, generate-pdf, deploy]
     runs-on: ubuntu-latest
     steps:
       - name: Summary
@@ -38,4 +44,4 @@ jobs:
           echo "📝 Skills updated from Notion"
           echo "🌐 HTML generated and committed to main"
           echo "📄 PDF attached to release"
-          echo "⏳ GitHub Pages deployment will trigger automatically from main branch"
+          echo "🚀 Deployed to GitHub Pages"

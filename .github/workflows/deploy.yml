@@ -1,13 +1,8 @@
 name: Deploy to GitHub Pages
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - 'index.html'
-      - 'CNAME'
-  workflow_dispatch:  # Allow manual trigger
+  workflow_dispatch:  # Manual trigger
+  workflow_call:      # Can be called by other workflows (like release.yml)
 
 permissions:
   contents: read
@@ -30,6 +25,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          ref: main  # Always deploy from main branch, not from tag
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
