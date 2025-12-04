@@ -1,0 +1,42 @@
+jobs:
+  - company: SoftServe
+    role: DevOps Engineer
+    location: Lviv, Ukraine
+    period: July 2019 – Present
+    responsibilities:
+      - Architecting and maintaining multi-cloud infrastructure across AWS and Azure environments
+      - Implementing GitOps workflows using ArgoCD, Argo Workflows, and Argo Events for continuous deployment
+      - Managing self-hosted and SaaS Kubernetes clusters (EKS, AKS, Talos) with advanced autoscaling strategies
+      - Building Infrastructure as Code solutions using Terraform and Pulumi
+      - Establishing CI/CD pipelines with GitHub Actions, GitLab CI, and Jenkins
+
+  - company: Lviv State University of Life Safety
+    role: Student Teacher
+    location: Lviv, Ukraine
+    period: Sep 2019 – Jun 2020
+    note: Part-time
+    responsibilities:
+      - Delivered courses on Linux Operating Systems and system administration
+      - Taught Relational Databases with focus on PostgreSQL
+      - Instructed Python programming and cybersecurity fundamentals
+      - Mentored students on practical DevOps and security concepts
+
+  - company: Quintagroup
+    role: DevOps Engineer
+    location: Lviv, Ukraine
+    period: Jan 2017 – Jun 2019
+    responsibilities:
+      - Led infrastructure automation for Prozorro and Prozorro Sale public procurement platforms
+      - Developed configuration management solutions using Ansible
+      - Implemented Infrastructure as Code with Terraform on AWS
+      - Built comprehensive monitoring and alerting systems using ELK stack and Netdata
+
+  - company: UARNet
+    role: System Administrator
+    location: Lviv, Ukraine
+    period: Jul 2014 – Nov 2016
+    responsibilities:
+      - Administered bare-metal server infrastructure for ISP operations
+      - Managed DNS, Mail, and Hosting services for colocation clients
+      - Operated domain reseller services and provided technical support
+      - Maintained high-availability infrastructure for critical network services

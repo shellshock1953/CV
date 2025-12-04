@@ -1,0 +1,51 @@
+projects:
+  - name: Prozorro / Prozorro Sale
+    emoji: 🇺🇦
+    technologies:
+      - AWS
+      - DeNovo Cloud
+      - Python
+      - Bash
+      - GitLab CI
+      - Ansible
+      - Terraform
+      - ELK
+      - Netdata
+      - Grafana
+    description: |
+      Public electronic procurement system for Ukrainian state and municipal customers to announce tenders and conduct transparent procurement processes. Served millions of transactions and became a model for government digitalization.
+
+  - name: Overhaul
+    emoji: 🚚
+    technologies:
+      - AWS
+      - Azure
+      - Kubernetes
+      - Jenkins
+      - GitHub Actions
+    description: |
+      Global cargo protection platform providing real-time visibility, risk management, and recovery services for supply chain security across international logistics networks.
+
+  - name: MOU (Ministry of Defense Ukraine)
+    emoji: 🎖️
+    note: Volunteer
+    technologies:
+      - AWS
+      - ECS
+      - GitHub Actions
+      - Terraform
+      - Terragrunt
+    description: |
+      Volunteer project supporting Ukrainian military forces with secure, scalable infrastructure for critical operations.
+
+  - name: Appelsin
+    emoji: 🍎
+    note: Student Mentorship
+    technologies:
+      - Node.js
+      - Python
+      - GitHub Actions
+      - Argo Workflows
+      - Kubernetes (Talos + AWS self-managed)
+    description: |
+      Mentored students through practical DevOps project implementation, teaching modern cloud-native development practices and GitOps workflows.

@@ -1,0 +1,60 @@
+name: Release
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  update-skills:
+    name: Update Skills from Notion
+    uses: ./.github/workflows/update-skills.yml
+    secrets: inherit
+
+  generate-html:
+    name: Generate HTML
+    needs: update-skills
+    uses: ./.github/workflows/generate-html.yml
+    secrets: inherit
+
+  generate-pdf:
+    name: Generate PDF
+    needs: generate-html
+    uses: ./.github/workflows/generate-pdf.yml
+    secrets: inherit
+    with:
+      release_tag: ${{ github.event.release.tag_name }}
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: generate-html
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: main  # Ensure we get the latest committed changes
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Deployment complete
+        run: |
+          echo "✅ Deployed to GitHub Pages: ${{ steps.deployment.outputs.page_url }}"

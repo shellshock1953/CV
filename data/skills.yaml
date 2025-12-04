@@ -1,0 +1,135 @@
+skill_categories:
+- name: AI Tools
+  emoji: 🤖
+  skills:
+  - name: Claude
+    proficiency: 5
+  - name: MCP (Model Context Protocol)
+    proficiency: 4
+- name: CI/CD
+  emoji: 🔄
+  skills:
+  - name: ArgoCD
+    proficiency: 7
+  - name: Argo Workflows
+    proficiency: 5
+  - name: Make.com
+    proficiency: 2
+  - name: Ansible Event-Driven
+    proficiency: 1
+  - name: Testcontainers
+    proficiency: 0
+- name: Cloud Providers and Services
+  emoji: ☁️
+  skills:
+  - name: Symbiosis
+    proficiency: 7
+  - name: AWS
+    proficiency: 7
+  - name: Heroku
+    proficiency: 3
+  - name: GCP
+    proficiency: 2
+  - name: Linode
+    proficiency: 1
+- name: Configuration Templating and Init
+  emoji: 📝
+  skills:
+  - name: Helm
+    proficiency: 6
+  - name: Timoni
+    proficiency: 1
+- name: Data Storage and Databases
+  emoji: 💾
+  skills:
+  - name: GlusterFS
+    proficiency: 7
+  - name: Object Storage
+    proficiency: 6
+  - name: Redis
+    proficiency: 5
+  - name: XFS
+    proficiency: 4
+  - name: TrueNAS
+    proficiency: 4
+- name: Hardware
+  emoji: 🖥️
+  skills:
+  - name: Servers
+    proficiency: 7
+- name: Infrastructure as Code (IaC) and Configuration Management
+  emoji: 🏗️
+  skills:
+  - name: Ansible
+    proficiency: 8
+  - name: Pulumi
+    proficiency: 4
+  - name: Terragrunt
+    proficiency: 3
+  - name: Winglang
+    proficiency: 0
+- name: Monitoring and Logging
+  emoji: 📊
+  skills:
+  - name: Grafana
+    proficiency: 8
+  - name: Prometheus
+    proficiency: 5
+  - name: Alertmanager
+    proficiency: 5
+  - name: ntfy
+    proficiency: 4
+  - name: Loki
+    proficiency: 4
+- name: Networking and Security
+  emoji: 🔐
+  skills:
+  - name: external-secrets
+    proficiency: 7
+  - name: Certmanager
+    proficiency: 6
+  - name: Ingress Nginx
+    proficiency: 6
+  - name: Tailscale
+    proficiency: 5
+  - name: LocalSend
+    proficiency: 5
+- name: Orchestration and Cluster Management
+  emoji: ⚙️
+  skills:
+  - name: docker-compose
+    proficiency: 8
+  - name: Cluster Autoscaler
+    proficiency: 6
+  - name: KEDA
+    proficiency: 5
+  - name: Reflector
+    proficiency: 5
+  - name: kasm
+    proficiency: 5
+- name: Programming Languages and Frameworks
+  emoji: 💻
+  skills:
+  - name: Git
+    proficiency: 6
+  - name: HCL2
+    proficiency: 3
+  - name: Testcontainers
+    proficiency: 2
+  - name: Go
+    proficiency: 1
+  - name: JavaScript
+    proficiency: 1
+- name: Utils
+  emoji: 🛠️
+  skills:
+  - name: synergy
+    proficiency: 7
+  - name: dmenu
+    proficiency: 7
+  - name: zsh
+    proficiency: 7
+  - name: rofi
+    proficiency: 6
+  - name: clipmenu
+    proficiency: 6

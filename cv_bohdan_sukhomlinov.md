@@ -1,199 +1,135 @@
-# Bohdan Sukhomlinov
+# Bohdan Sukhomlinov - CV
 
 **Senior DevOps Engineer | Platform Engineer | SRE**
 
-📧 shellshock.dnull@gmail.com | 📱 +380952176437 | 📍 Lviv, Ukraine  
-🔗 [LinkedIn](https://www.linkedin.com/in/shellshock-dnull/) | 💻 [GitHub](https://github.com/shellshock1953)
+🌐 **Live Site:** [cv.dnull.systems](https://cv.dnull.systems)
 
 ---
 
-## Professional Summary
+## Overview
 
-Senior DevOps Engineer with over 10 years of experience in the industry, progressing from Systems Administrator through DevOps to SRE and Platform Engineering roles. Specialized in designing and managing cloud-native infrastructure on AWS and Azure with deep expertise in Kubernetes orchestration. Strong advocate for open source with active contributions, experienced educator, and dedicated volunteer supporting Ukrainian government and military projects.
+This repository contains my professional CV/resume, built with an automated template-based generation system. The site combines:
 
----
+- **Local YAML files** for experience, projects, education (version-controlled)
+- **Notion Database** for technical skills (auto-synced)
+- **Jinja2 Templates** for HTML generation
+- **GitHub Actions** for automated deployment
+- **GitHub Pages** for hosting
 
-## Experience
+## Quick Start
 
-### SoftServe — DevOps Engineer
-**Lviv, Ukraine | July 2019 – Present**
+### Local Development
 
-- Architecting and maintaining multi-cloud infrastructure across AWS and Azure environments
-- Implementing GitOps workflows using ArgoCD, Argo Workflows, and Argo Events for continuous deployment
-- Managing self-hosted and SaaS Kubernetes clusters (EKS, AKS, Talos) with advanced autoscaling strategies
-- Building Infrastructure as Code solutions using Terraform and Pulumi
-- Establishing CI/CD pipelines with GitHub Actions, GitLab CI, and Jenkins
+1. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-### Lviv State University of Life Safety — Student Teacher (Part-time)
-**Lviv, Ukraine | September 2019 – June 2020**
+2. **Generate HTML:**
+   ```bash
+   python scripts/generate_html.py
+   ```
 
-- Delivered courses on Linux Operating Systems and system administration
-- Taught Relational Databases with focus on PostgreSQL
-- Instructed Python programming and cybersecurity fundamentals
-- Mentored students on practical DevOps and security concepts
+3. **Fetch skills from Notion:**
+   ```bash
+   export NOTION_API_KEY="your_notion_api_key"
+   python scripts/fetch_notion_skills.py
+   ```
 
-### Quintagroup — DevOps Engineer
-**Lviv, Ukraine | January 2017 – June 2019**
+### Making Updates
 
-- Led infrastructure automation for Prozorro and Prozorro Sale public procurement platforms
-- Developed configuration management solutions using Ansible
-- Implemented Infrastructure as Code with Terraform on AWS
-- Built comprehensive monitoring and alerting systems using ELK stack and Netdata
+**To update CV content:**
+1. Edit the appropriate YAML file in `data/`
+2. Commit and push to `main`
+3. Run "Generate HTML" workflow manually OR create a release
 
-### UARNet — System Administrator
-**Lviv, Ukraine | July 2014 – November 2016**
+**To update technical skills:**
+1. Update skills in [Notion database](https://www.notion.so/dnull/ce553f61f831464eb05592124282802f)
+2. Run "Update Skills from Notion" workflow manually OR create a release
 
-- Administered bare-metal server infrastructure for ISP operations
-- Managed DNS, Mail, and Hosting services for colocation clients
-- Operated domain reseller services and provided technical support
-- Maintained high-availability infrastructure for critical network services
+**To trigger a full build and deployment:**
+1. Create a new GitHub release (semantic versioning recommended)
+2. Workflows automatically:
+   - Update skills from Notion
+   - Generate index.html
+   - Create PDF
+   - Deploy to GitHub Pages
+   - Attach PDF to release
 
----
+## Architecture
 
-## Projects
+```
+cv/
+├── data/                       # Edit YAML files here to update CV
+│   ├── personal.yaml
+│   ├── experience.yaml
+│   ├── projects.yaml
+│   ├── skills.yaml             # Auto-generated from Notion
+│   ├── education.yaml
+│   ├── languages.yaml
+│   └── volunteer.yaml
+├── scripts/
+│   ├── fetch_notion_skills.py  # Notion → skills.yaml
+│   └── generate_html.py        # YAML + Template → index.html
+├── templates/
+│   └── index.html.j2           # Jinja2 template
+├── .github/workflows/
+│   ├── update-skills.yml       # Reusable workflow
+│   ├── generate-html.yml       # Reusable workflow
+│   ├── generate-pdf.yml        # Reusable workflow
+│   └── release.yml             # Orchestrator
+└── index.html                  # Generated (DO NOT EDIT)
+```
 
-### Prozorro / Prozorro Sale
-**Technologies:** AWS, DeNovo Cloud, Python, Bash, GitLab CI, Ansible, Terraform, ELK, Netdata, Grafana
+## Workflows
 
-Public electronic procurement system for Ukrainian state and municipal customers to announce tenders and conduct transparent procurement processes. Served millions of transactions and became a model for government digitalization.
+### Individual Workflows (Manual Trigger)
 
-### Overhaul
-**Technologies:** AWS, Azure, Kubernetes, Jenkins, GitHub Actions
+- **Update Skills** - Fetch skills from Notion
+- **Generate HTML** - Render template with YAML data
+- **Generate PDF** - Convert HTML to PDF
 
-Global cargo protection platform providing real-time visibility, risk management, and recovery services for supply chain security across international logistics networks.
+### Release Workflow (Automatic)
 
-### MOU (Ministry of Defense Ukraine)
-**Technologies:** AWS, ECS, GitHub Actions, Terraform, Terragrunt
+Triggered on GitHub release creation:
+1. Updates skills from Notion
+2. Generates index.html
+3. Creates PDF
+4. Deploys to GitHub Pages
+5. Attaches PDF to release
 
-Volunteer project supporting Ukrainian military forces with secure, scalable infrastructure for critical operations.
+## Features
 
-### Appelsin (Student Mentorship)
-**Technologies:** Node.js, Python, GitHub Actions, Argo Workflows, Kubernetes (Talos + AWS self-managed)
+- **Automated Content Pipeline** - Edit YAML → Generate HTML → Deploy
+- **Notion Integration** - Skills auto-sync from Notion database
+- **PDF Generation** - Professional PDF attached to releases
+- **GitHub Pages Hosting** - Custom domain support
+- **Responsive Design** - Mobile-friendly and print-optimized
+- **Separation of Concerns** - Modular workflows for maintainability
 
-Mentored students through practical DevOps project implementation, teaching modern cloud-native development practices and GitOps workflows.
+## Skills System
 
----
+Technical skills are maintained in a [Notion database](https://www.notion.so/dnull/ce553f61f831464eb05592124282802f) with:
+- **Name** - Technology/tool name
+- **Category** - Skill grouping
+- **Proficiency** - 1-10 rating
 
-## Technical Skills
+The automation fetches the top 10 skills per category (sorted by proficiency) and generates `data/skills.yaml`.
 
-### Cloud Platforms
-| Technology | Proficiency |
-|------------|-------------|
-| AWS | ████████░░ 8/10 |
-| Symbiosis | ███████░░░ 7/10 |
-| GitHub | ██████░░░░ 6/10 |
-| GitLab | █████░░░░░ 5/10 |
-| Azure | ████░░░░░░ 4/10 |
-| Oracle Cloud | ████░░░░░░ 4/10 |
+## Technologies Used
 
-### Orchestration & Containers
-| Technology | Proficiency |
-|------------|-------------|
-| Docker / Docker Compose | ████████░░ 8/10 |
-| Kubernetes | ███████░░░ 7/10 |
-| Cluster Autoscaler | ██████░░░░ 6/10 |
-| Helm | ██████░░░░ 6/10 |
-| KEDA | █████░░░░░ 5/10 |
-| microk8s | █████░░░░░ 5/10 |
-| Proxmox | ████░░░░░░ 4/10 |
-| Argo Rollouts | ████░░░░░░ 4/10 |
-| Talos | ███░░░░░░░ 3/10 |
-| EKS | ███░░░░░░░ 3/10 |
+- **Template Engine:** Jinja2
+- **Data Format:** YAML
+- **CI/CD:** GitHub Actions
+- **PDF Generation:** Playwright/Chromium
+- **Integration:** Notion API
+- **Hosting:** GitHub Pages
+- **Domain:** cv.dnull.systems
 
-### Infrastructure as Code
-| Technology | Proficiency |
-|------------|-------------|
-| Ansible | ████████░░ 8/10 |
-| Terraform | █████░░░░░ 5/10 |
-| Pulumi | ████░░░░░░ 4/10 |
-| Terragrunt | ███░░░░░░░ 3/10 |
-| Crossplane | ██░░░░░░░░ 2/10 |
+## License
 
-### CI/CD & GitOps
-| Technology | Proficiency |
-|------------|-------------|
-| ArgoCD | ███████░░░ 7/10 |
-| GitLab CI | ██████░░░░ 6/10 |
-| GitHub Actions | █████░░░░░ 5/10 |
-| Jenkins | █████░░░░░ 5/10 |
-| Argo Workflows | █████░░░░░ 5/10 |
-
-### Monitoring & Observability
-| Technology | Proficiency |
-|------------|-------------|
-| Grafana | ████████░░ 8/10 |
-| Netdata | ████████░░ 8/10 |
-| Prometheus | █████░░░░░ 5/10 |
-| Alertmanager | █████░░░░░ 5/10 |
-| DataDog | █████░░░░░ 5/10 |
-| Loki | ████░░░░░░ 4/10 |
-| ELK Stack | ███░░░░░░░ 3/10 |
-
-### Networking & Security
-| Technology | Proficiency |
-|------------|-------------|
-| External Secrets | ███████░░░ 7/10 |
-| Traefik | ███████░░░ 7/10 |
-| Ingress Nginx | ██████░░░░ 6/10 |
-| Cert-manager | ██████░░░░ 6/10 |
-| Zerotier | ██████░░░░ 6/10 |
-| Mikrotik | █████░░░░░ 5/10 |
-| Tailscale | █████░░░░░ 5/10 |
-
-### Data Storage
-| Technology | Proficiency |
-|------------|-------------|
-| GlusterFS | ███████░░░ 7/10 |
-| EBS | ███████░░░ 7/10 |
-| Object Storage (S3) | ██████░░░░ 6/10 |
-| Redis | █████░░░░░ 5/10 |
-| PostgreSQL | ████░░░░░░ 4/10 |
-
-### Programming & Scripting
-| Technology | Proficiency |
-|------------|-------------|
-| Bash | ███████░░░ 7/10 |
-| YAML | ███████░░░ 7/10 |
-| Python | ██████░░░░ 6/10 |
-| Git | ██████░░░░ 6/10 |
-| HCL | ███░░░░░░░ 3/10 |
-
-### AI Tools
-| Technology | Proficiency |
-|------------|-------------|
-| Claude (Anthropic) | █████░░░░░ 5/10 |
-| MCP (Model Context Protocol) | ████░░░░░░ 4/10 |
-| GitHub Copilot | ████░░░░░░ 4/10 |
+Personal CV repository - all rights reserved.
 
 ---
 
-## Education
-
-### Lviv State University of Life Safety
-**Postgraduate in Cyber Security**  
-2017 – 2020
-
-### Lviv State University of Life Safety
-**Master's Degree in Administrative Management in Information Security**  
-2015 – 2016
-
-### Lviv State University of Life Safety
-**Bachelor's Degree in Information Security Management**  
-2011 – 2015
-
----
-
-## Languages
-
-- **Ukrainian** — Native
-- **English** — Professional Working Proficiency
-
----
-
-## Volunteer Work
-
-Active volunteer supporting Ukrainian government and military technology initiatives. Contributed to the MOU (Ministry of Defense) project providing secure infrastructure solutions. Available for part-time remote volunteer opportunities in projects supporting Ukraine.
-
----
-
-*Last updated: December 2024*
+**Last Updated:** December 2024

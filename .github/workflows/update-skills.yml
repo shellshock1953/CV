@@ -1,0 +1,63 @@
+name: Update Skills from Notion
+
+on:
+  workflow_dispatch:  # Manual trigger
+  workflow_call:      # Can be called by other workflows
+
+permissions:
+  contents: write
+
+jobs:
+  update-skills:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Fetch skills from Notion
+        env:
+          NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
+        run: |
+          python scripts/fetch_notion_skills.py
+
+      - name: Check for changes
+        id: check_changes
+        run: |
+          if git diff --quiet data/skills.yaml; then
+            echo "changes=false" >> $GITHUB_OUTPUT
+            echo "No changes detected in skills.yaml"
+          else
+            echo "changes=true" >> $GITHUB_OUTPUT
+            echo "Changes detected in skills.yaml"
+          fi
+
+      - name: Commit and push changes
+        if: steps.check_changes.outputs.changes == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/skills.yaml
+          git commit -m "Update skills from Notion
+
+          🤖 Generated with [Claude Code](https://claude.com/claude-code)
+
+          Co-Authored-By: Claude <noreply@anthropic.com>"
+          git push
+
+      - name: No changes
+        if: steps.check_changes.outputs.changes == 'false'
+        run: |
+          echo "✅ Skills are already up to date"
