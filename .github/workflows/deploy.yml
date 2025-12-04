@@ -1,8 +1,12 @@
 name: Deploy to GitHub Pages
 
 on:
+  push:
+    branches: ["main"]
+    paths:
+      - 'index.html'
+      - 'CNAME'
   workflow_dispatch:  # Manual trigger
-  workflow_call:      # Can be called by other workflows (like release.yml)
 
 permissions:
   contents: read
