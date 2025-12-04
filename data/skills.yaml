@@ -17,8 +17,6 @@ skill_categories:
     proficiency: 2
   - name: Ansible Event-Driven
     proficiency: 1
-  - name: Testcontainers
-    proficiency: 0
 - name: Cloud Providers and Services
   emoji: ☁️
   skills:
@@ -52,12 +50,18 @@ skill_categories:
     proficiency: 5
   - name: XFS
     proficiency: 4
+  - name: TrueNAS
+    proficiency: 4
+  - name: PostgreSQL
+    proficiency: 4
+  - name: Velero
+    proficiency: 3
 - name: Hardware
   emoji: 🖥️
   skills:
   - name: Servers
     proficiency: 7
-- name: Infrastructure as Code (IaC) and Configuration Management
+- name: Infrastructure as Code
   emoji: 🏗️
   skills:
   - name: Ansible
@@ -66,8 +70,6 @@ skill_categories:
     proficiency: 4
   - name: Terragrunt
     proficiency: 3
-  - name: Winglang
-    proficiency: 0
 - name: Monitoring and Logging
   emoji: 📊
   skills:
@@ -81,6 +83,12 @@ skill_categories:
     proficiency: 4
   - name: Loki
     proficiency: 4
+  - name: ActualBudget
+    proficiency: 3
+  - name: Logstash
+    proficiency: 3
+  - name: Uptime-Kuma
+    proficiency: 1
 - name: Networking and Security
   emoji: 🔐
   skills:
@@ -94,6 +102,12 @@ skill_categories:
     proficiency: 5
   - name: LocalSend
     proficiency: 5
+  - name: Mikrotik
+    proficiency: 5
+  - name: cloudflare
+    proficiency: 3
+  - name: Keycloak
+    proficiency: 2
 - name: Orchestration and Cluster Management
   emoji: ⚙️
   skills:
@@ -107,6 +121,12 @@ skill_categories:
     proficiency: 5
   - name: kasm
     proficiency: 5
+  - name: Argo Rollout
+    proficiency: 4
+  - name: kubeadm
+    proficiency: 4
+  - name: permission-manager
+    proficiency: 4
 - name: Programming Languages and Frameworks
   emoji: 💻
   skills:
@@ -133,3 +153,9 @@ skill_categories:
     proficiency: 6
   - name: clipmenu
     proficiency: 6
+  - name: fonts
+    proficiency: 5
+  - name: eza
+    proficiency: 5
+  - name: MacOS Specific
+    proficiency: 4

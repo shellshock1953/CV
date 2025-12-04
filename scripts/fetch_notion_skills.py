@@ -15,7 +15,7 @@ import yaml
 NOTION_TOKEN = os.getenv("NOTION_API_KEY")
 DATABASE_ID = "ce553f61-f831-464e-b055-92124282802f"
 OUTPUT_FILE = "data/skills.yaml"
-TOP_N_SKILLS = 5
+TOP_N_SKILLS = 8
 
 # Emoji mapping for skill categories
 CATEGORY_EMOJIS = {
@@ -25,7 +25,7 @@ CATEGORY_EMOJIS = {
     "Configuration Templating and Init": "📝",
     "Data Storage and Databases": "💾",
     "Hardware": "🖥️",
-    "Infrastructure as Code (IaC) and Configuration Management": "🏗️",
+    "Infrastructure as Code": "🏗️",
     "Monitoring and Logging": "📊",
     "Networking and Security": "🔐",
     "Orchestration and Cluster Management": "⚙️",
@@ -63,7 +63,8 @@ def fetch_skills_from_notion():
             category = extract_select(properties.get("Class", {}))  # Using "Class" property
             proficiency = extract_number(properties.get("Proficiency", {}))
 
-            if name and category and proficiency is not None:
+            # Skip skills with 0 proficiency
+            if name and category and proficiency is not None and proficiency > 0:
                 skills.append({
                     "name": name,
                     "category": category,
