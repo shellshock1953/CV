@@ -19,6 +19,23 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          ref: main  # Always use latest main branch (where HTML was committed)
+
+      - name: Pull latest changes
+        run: |
+          git pull origin main
+          echo "Latest commit:"
+          git log -1 --oneline
+
+      - name: Verify index.html exists
+        run: |
+          if [ ! -f index.html ]; then
+            echo "ERROR: index.html not found!"
+            exit 1
+          fi
+          echo "index.html size: $(wc -c < index.html) bytes"
+          echo "Last modified: $(stat -f "%Sm" -t "%Y-%m-%d %H:%M:%S" index.html || stat -c "%y" index.html)"
 
       - name: Set up Python
         uses: actions/setup-python@v5
