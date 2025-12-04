@@ -48,9 +48,9 @@ skill_categories:
     proficiency: 6
   - name: Redis
     proficiency: 5
+  - name: Ceph
+    proficiency: 5
   - name: XFS
-    proficiency: 4
-  - name: TrueNAS
     proficiency: 4
 - name: Hardware
   emoji: 🖥️
