@@ -138,12 +138,14 @@
         }
         .lang-item span { color: #64748b; }
         .volunteer {
-            background: linear-gradient(135deg, #fef3c7, #fde68a);
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 15px;
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 3px solid #2563eb;
+            margin-top: 10px;
+            font-size: 0.9em;
         }
-        .volunteer-icon { font-size: 1.5em; margin-right: 10px; }
+        .volunteer-icon { font-size: 1.2em; margin-right: 8px; }
         footer {
             text-align: center;
             margin-top: 40px;
@@ -187,6 +189,23 @@
         </section>
 
         <section>
+            <h2>Technical Skills</h2>
+            <p style="font-size: 0.85em; color: #64748b; margin-bottom: 10px;">Numbers indicate proficiency level (1-10 scale)</p>
+            <div class="skills-section">
+                {% for category in skills.skill_categories %}
+                <div class="skill-category">
+                    <h3>{{ category.emoji }} {{ category.name }}</h3>
+                    <div class="skill-badges">
+                        {% for skill in category.skills %}
+                        <span class="skill-badge">{{ skill.name }} {{ skill.proficiency }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <section>
             <h2>Experience</h2>
             {% for job in experience.jobs %}
             <div class="job-header">
@@ -223,23 +242,6 @@
                 </li>
             {% endfor %}
             </ul>
-        </section>
-
-        <section>
-            <h2>Technical Skills</h2>
-            <p style="font-size: 0.85em; color: #64748b; margin-bottom: 10px;">Numbers indicate proficiency level (1-10 scale)</p>
-            <div class="skills-section">
-                {% for category in skills.skill_categories %}
-                <div class="skill-category">
-                    <h3>{{ category.emoji }} {{ category.name }}</h3>
-                    <div class="skill-badges">
-                        {% for skill in category.skills %}
-                        <span class="skill-badge">{{ skill.name }} {{ skill.proficiency }}</span>
-                        {% endfor %}
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
         </section>
 
         <section>

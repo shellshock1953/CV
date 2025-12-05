@@ -10,7 +10,7 @@ This is a personal CV/resume website for Bohdan Sukhomlinov, hosted on GitHub Pa
 
 **Hybrid Data System:**
 - **Local YAML files** (`data/`) - Version-controlled content for experience, projects, education, etc.
-- **Notion Database** - Source of truth for technical skills (auto-synced, top 8 per category)
+- **Notion Database** - Source of truth for technical skills (auto-synced, top 10 per category)
 - **Jinja2 Template** (`templates/index.html.j2`) - HTML template with compact styling
 - **Generated Output** (`index.html`) - Deployed to GitHub Pages
 
@@ -70,7 +70,7 @@ cv/
 ## Automated Workflows
 
 **Individual Workflows:**
-- `update-skills.yml` - Fetches top 8 skills per category from Notion, excludes 0 proficiency, commits to main
+- `update-skills.yml` - Fetches top 10 skills per category from Notion (proficiency > 4), commits to main
 - `generate-html.yml` - Renders Jinja2 template, commits to main
 - `generate-pdf.yml` - Converts HTML to PDF using Playwright, attaches to release
 - `deploy.yml` - Deploys to GitHub Pages (triggers on push to main when index.html changes)
@@ -91,14 +91,15 @@ cv/
 **Notion Integration:**
 - Database ID: `ce553f61-f831-464e-b055-92124282802f`
 - Properties: `Name` (title), `Class` (select), `Proficiency` (number 0-10)
-- Fetches top 8 skills per category sorted by proficiency (descending)
-- **Excludes skills with 0 proficiency** automatically
+- Fetches top 10 skills per category sorted by proficiency (descending)
+- **Excludes skills with proficiency ≤ 4** (only shows proficiency 5 and above)
+- **Handles pagination** - fetches all pages from Notion (not just first 100)
 - Output: `data/skills.yaml`
 
 **Skills Configuration:**
-- `TOP_N_SKILLS = 8` in `fetch_notion_skills.py`
-- Skills displayed in 2-column grid (6 rows with 12 categories)
-- Compact styling: small fonts (0.75em), tight spacing (3px margins), narrow bars (80px)
+- `TOP_N_SKILLS = 10` in `fetch_notion_skills.py`
+- Skills displayed as inline badges/tags (flexbox wrapping)
+- Compact styling: small fonts (0.72em), rounded pills, blue gradient background
 
 **Category Names and Emojis:**
 ```python
@@ -154,11 +155,28 @@ Required secrets:
 
 ## Design Decisions
 
+**CV Structure (Optimized for Tech Roles):**
+- Section order: Summary → Skills → Experience → Projects → Open Source → Education → Languages → Volunteer
+- Skills placed early for high impact and ATS optimization
+- Volunteer section minimized (subtle styling, moved to end)
+
+**Professional Summary:**
+- Includes years of experience with key technologies (AWS 9+, Kubernetes 6+, Azure 4+)
+- Highlights key achievement: enterprise Kubernetes migration with zero-downtime
+- Focuses on progression and specialization
+
+**Content Style:**
+- Strong action verbs: Architected, Engineered, Implemented, Orchestrated, Designed
+- Results-oriented project descriptions
+- Emphasis on scale, impact, and technical depth
+
 **Skills Section:**
-- 2-column grid layout (not 3 or 4) for readability
-- Top 8 skills per category (balanced between detail and compactness)
-- Excludes 0 proficiency skills (only show actual experience)
-- Compact styling: 0.75em fonts, 3px spacing, 80px bars, 5px bar height
+- 2-column grid layout for category organization
+- Top 10 skills per category (badges layout allows more skills in less space)
+- Excludes skills with proficiency ≤ 4 (only show intermediate and above)
+- Badge/tag layout: inline pills with skill name + proficiency number
+- Proficiency note: "Numbers indicate proficiency level (1-10 scale)"
+- Compact styling: 0.72em fonts, 5px gaps, rounded corners, blue gradient
 - 2-column responsive: desktop (2 cols) → tablet (2 cols) → mobile (1 col)
 
 **Template Styling:**
@@ -166,7 +184,7 @@ Required secrets:
 - Responsive design with breakpoints at 900px, 600px
 - Print-optimized with `@media print`
 - Color scheme: Blue tones (#1e40af, #2563eb)
-- Skills use text-overflow ellipsis for long names
+- Volunteer section: subtle styling (no prominent yellow gradient)
 
 ## Troubleshooting
 

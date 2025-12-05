@@ -4,11 +4,11 @@ jobs:
     location: Lviv, Ukraine
     period: July 2019 – Present
     responsibilities:
-      - Architecting and maintaining multi-cloud infrastructure across AWS and Azure environments
-      - Implementing GitOps workflows using ArgoCD, Argo Workflows, and Argo Events for continuous deployment
-      - Managing self-hosted and SaaS Kubernetes clusters (EKS, AKS, Talos) with advanced autoscaling strategies
-      - Building Infrastructure as Code solutions using Terraform and Pulumi
-      - Establishing CI/CD pipelines with GitHub Actions, GitLab CI, and Jenkins
+      - Architected and maintained multi-cloud infrastructure across AWS and Azure environments
+      - Implemented GitOps workflows using ArgoCD, Argo Workflows, and Argo Events for continuous deployment
+      - Orchestrated self-hosted and SaaS Kubernetes clusters (EKS, AKS, Talos) with advanced autoscaling strategies
+      - Engineered Infrastructure as Code solutions using Terraform and Pulumi
+      - Established CI/CD pipelines with GitHub Actions, GitLab CI, and Jenkins
 
   - company: Lviv State University of Life Safety
     role: Student Teacher
@@ -26,10 +26,10 @@ jobs:
     location: Lviv, Ukraine
     period: Jan 2017 – Jun 2019
     responsibilities:
-      - Led infrastructure automation for Prozorro and Prozorro Sale public procurement platforms
-      - Developed configuration management solutions using Ansible
+      - Architected and automated infrastructure for Prozorro and Prozorro Sale public procurement platforms
+      - Engineered configuration management solutions using Ansible
       - Implemented Infrastructure as Code with Terraform on AWS
-      - Built comprehensive monitoring and alerting systems using ELK stack and Netdata
+      - Designed and deployed comprehensive monitoring and alerting systems using ELK stack and Netdata
 
   - company: UARNet
     role: System Administrator

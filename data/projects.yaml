@@ -12,7 +12,7 @@ projects:
       - Netdata
       - Grafana
     description: |
-      Public electronic procurement system for municipal customers to announce tenders and conduct transparent procurement processes. Served millions of transactions and became a model for government digitalization.
+      Architected and maintained public electronic procurement system infrastructure serving millions of transactions for municipal customers conducting transparent procurement processes. Platform became a model for government digitalization.
 
   - name: Enterprice Logistics
     emoji: 🚚
@@ -23,7 +23,7 @@ projects:
       - Jenkins
       - GitHub Actions
     description: |
-      Global cargo protection platform providing real-time visibility, risk management, and recovery services for supply chain security across international logistics networks.
+      Engineered and scaled global cargo protection platform infrastructure providing real-time visibility, risk management, and recovery services for supply chain security across international logistics networks.
 
   - name: Ukrainian Defense Support Project
     emoji: 🎖️
@@ -35,7 +35,7 @@ projects:
       - Terraform
       - Terragrunt
     description: |
-      Volunteer project, highly secure, scalable infrastructure for critical operations.
+      Architected and maintained highly secure, scalable infrastructure for critical defense operations.
 
   - name: Appelsin
     emoji: 🍎
