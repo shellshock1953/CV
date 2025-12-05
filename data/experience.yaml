@@ -1,8 +1,29 @@
 jobs:
-  - company: SoftServe
-    role: DevOps Engineer
+  - company: Freelance
+    role: DevOps / Platform / SRE
     location: Lviv, Ukraine
-    period: July 2019 – Present
+    period: Jul 2025 - Present
+    responsibilities:
+      - Migrated legacy systems to Kubernetes with application containerization
+      - Architected enterprise-ready infrastructure from scratch
+      - Implemented CI/CD pipelines
+      - Refactored existing solutions to improve reliability and scalability
+
+  - company: DigitalCares
+    role: Lead DevOps Engineer
+    location: Lviv, Ukraine
+    period: Dec 2024 – Jul 2025
+    responsibilities:
+      - Supported government-based critical infrastructure
+      - Modernized bare-metal servers with Kubernetes and TalosOS
+      - Migrated legacy projects to modern HA solutions
+      - Implemented multi-cluster traffic hot-swap to reduce downtime
+      - Developed monitoring system based on Grafana/Prometheus/Loki/Alertmanager stack
+
+  - company: SoftServe
+    role: Senior DevOps / Platform Engineer
+    location: Lviv, Ukraine
+    period: Jul 2019 – Dec 2024
     responsibilities:
       - Architected and maintained multi-cloud infrastructure across AWS and Azure environments
       - Implemented GitOps workflows using ArgoCD, Argo Workflows, and Argo Events for continuous deployment
@@ -22,7 +43,7 @@ jobs:
       - Mentored students on practical DevOps and security concepts
 
   - company: Quintagroup
-    role: DevOps Engineer
+    role: Middle DevOps Engineer
     location: Lviv, Ukraine
     period: Jan 2017 – Jun 2019
     responsibilities:
