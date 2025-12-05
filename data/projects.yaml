@@ -12,9 +12,9 @@ projects:
       - Netdata
       - Grafana
     description: |
-      Architected and maintained public electronic procurement system infrastructure serving millions of transactions for municipal customers conducting transparent procurement processes. Platform became a model for government digitalization.
+      Architected and maintained public electronic procurement system infrastructure serving millions of transactions for municipal customers conducting transparent procurement processes. Platform became a model for government digitalization. Led migration from AWS to local cloud provider (monitoring infrastructure).
 
-  - name: Enterprice Logistics
+  - name: Enterprise Logistics
     emoji: 🚚
     technologies:
       - AWS
@@ -23,9 +23,9 @@ projects:
       - Jenkins
       - GitHub Actions
     description: |
-      Engineered and scaled global cargo protection platform infrastructure providing real-time visibility, risk management, and recovery services for supply chain security across international logistics networks.
+      Engineered and scaled global cargo protection platform infrastructure providing real-time visibility, risk management, and recovery services for supply chain security across international logistics networks. Led large-scale enterprise migration from AWS to Azure with zero downtime.
 
-  - name: Ukrainian Defense Support Project
+  - name: Ukrainian Defense Support Projects
     emoji: 🎖️
     note: Volunteer
     technologies:
@@ -37,8 +37,55 @@ projects:
     description: |
       Architected and maintained highly secure, scalable infrastructure for critical defense operations.
 
-  - name: Appelsin
-    emoji: 🍎
+  - name: Kyiv City Critical Infrastructure
+    emoji: 🏙️
+    technologies:
+      - bare-metal servers
+      - Kubernetes (kubeadm/TalosOS)
+      - ArgoCD
+      - Jenkins
+    description: |
+      Developed and managed resilient infrastructure for Kyiv City's crisis management systems, ensuring high availability and rapid response capabilities.
+
+  - name: Infrastructure for Big Sport Events
+    emoji: 🏟️
+    note: Freelance
+    technologies:
+      - AWS
+      - ECS
+      - GitHub Actions
+      - Terraform
+    description: |
+      Separated monolithic AWS account into multiple accounts with strict IAM policies, migrated systems between accounts, and improved CI/CD pipelines.
+
+  - name: Data Analytics Project
+    emoji: 📊
+    note: Freelance
+    technologies:
+      - docker-compose
+      - AWS EKS
+      - GitHub Actions
+      - ArgoCD
+    description: |
+      Migrated monolithic data analytics application to Kubernetes with containerization, implementing CI/CD pipelines and autoscaling.
+
+  - name: HomeLab
+    emoji: 🏠
+    note: Personal Project
+    technologies:
+      - Mikrotik
+      - bare-metal servers
+      - Proxmox
+      - Terraform / Terragrunt
+      - Tailscale
+      - Kubernetes (k3s / TalosOS)
+      - GlusterFS / Ceph
+      - ArgoCD
+    description: |
+      Built enterprise-grade homelab infrastructure with self-hosted Kubernetes clusters, distributed storage, and GitOps workflows for continuous learning and experimentation.
+
+  - name: Appelsin Project
+    emoji: 🍊
     note: Student Mentorship
     technologies:
       - Node.js
