@@ -90,39 +90,22 @@
             color: #1e40af;
             font-size: 0.85em;
         }
-        .skill-item {
+        .skill-badges {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin: 3px 0;
-            font-size: 0.75em;
-            gap: 6px;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: 6px;
         }
-        .skill-name {
-            flex: 1;
+        .skill-badge {
+            display: inline-block;
+            padding: 3px 8px;
+            background: linear-gradient(135deg, #e0e7ff, #dbeafe);
+            border: 1px solid #93c5fd;
+            border-radius: 12px;
+            font-size: 0.72em;
+            color: #1e40af;
             white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-        .skill-bar {
-            width: 80px;
-            height: 5px;
-            background: #e2e8f0;
-            border-radius: 2px;
-            overflow: hidden;
-            flex-shrink: 0;
-        }
-        .skill-fill {
-            height: 100%;
-            background: linear-gradient(90deg, #2563eb, #3b82f6);
-            border-radius: 2px;
-        }
-        .skill-level {
-            width: 26px;
-            text-align: right;
-            color: #64748b;
-            font-size: 0.75em;
-            flex-shrink: 0;
+            font-weight: 500;
         }
         .project-card {
             background: #f8fafc;
@@ -301,510 +284,144 @@
 
         <section>
             <h2>Technical Skills</h2>
+            <p style="font-size: 0.85em; color: #64748b; margin-bottom: 10px;">Numbers indicate proficiency level (1-10 scale)</p>
             <div class="skills-section">
                 <div class="skill-category">
                     <h3>🤖 AI Tools</h3>
-                    <div class="skill-item">
-                        <span class="skill-name">Claude</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 70%"></div>
-                        </div>
-                        <span class="skill-level">7/10</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">gemini</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 60%"></div>
-                        </div>
-                        <span class="skill-level">6/10</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">MCP (Model Context Protocol)</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 40%"></div>
-                        </div>
-                        <span class="skill-level">4/10</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Copilot</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 40%"></div>
-                        </div>
-                        <span class="skill-level">4/10</span>
+                    <div class="skill-badges">
+                        <span class="skill-badge">Claude 7</span>
+                        <span class="skill-badge">gemini 6</span>
+                        <span class="skill-badge">MCP (Model Context Protocol) 4</span>
+                        <span class="skill-badge">Copilot 4</span>
                     </div>
                 </div>
                 <div class="skill-category">
                     <h3>🔄 CI/CD</h3>
-                    <div class="skill-item">
-                        <span class="skill-name">ArgoCD</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 80%"></div>
-                        </div>
-                        <span class="skill-level">8/10</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Argo Workflows</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 60%"></div>
-                        </div>
-                        <span class="skill-level">6/10</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Make.com</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 20%"></div>
-                        </div>
-                        <span class="skill-level">2/10</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Ansible Event-Driven</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 10%"></div>
-                        </div>
-                        <span class="skill-level">1/10</span>
+                    <div class="skill-badges">
+                        <span class="skill-badge">ArgoCD 8</span>
+                        <span class="skill-badge">Gitlab CI 7</span>
+                        <span class="skill-badge">Github Actions 7</span>
+                        <span class="skill-badge">Argo Workflows 6</span>
+                        <span class="skill-badge">Jenkins 6</span>
                     </div>
                 </div>
                 <div class="skill-category">
                     <h3>☁️ Cloud Providers and Services</h3>
-                    <div class="skill-item">
-                        <span class="skill-name">Symbiosis</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 70%"></div>
-                        </div>
-                        <span class="skill-level">7/10</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">AWS</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 70%"></div>
-                        </div>
-                        <span class="skill-level">7/10</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Heroku</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 30%"></div>
-                        </div>
-                        <span class="skill-level">3/10</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">GCP</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 20%"></div>
-                        </div>
-                        <span class="skill-level">2/10</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Linode</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 10%"></div>
-                        </div>
-                        <span class="skill-level">1/10</span>
+                    <div class="skill-badges">
+                        <span class="skill-badge">Github 7</span>
+                        <span class="skill-badge">Symbiosis 7</span>
+                        <span class="skill-badge">AWS 7</span>
+                        <span class="skill-badge">Gitlab 6</span>
+                        <span class="skill-badge">Azure 6</span>
+                        <span class="skill-badge">Oracle 4</span>
                     </div>
                 </div>
                 <div class="skill-category">
                     <h3>📝 Configuration Templating and Init</h3>
-                    <div class="skill-item">
-                        <span class="skill-name">Helm</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 60%"></div>
-                        </div>
-                        <span class="skill-level">6/10</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">systemd</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 30%"></div>
-                        </div>
-                        <span class="skill-level">3/10</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Tini</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 10%"></div>
-                        </div>
-                        <span class="skill-level">1/10</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Timoni</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 10%"></div>
-                        </div>
-                        <span class="skill-level">1/10</span>
+                    <div class="skill-badges">
+                        <span class="skill-badge">Helm 6</span>
                     </div>
                 </div>
                 <div class="skill-category">
                     <h3>💾 Data Storage and Databases</h3>
-                    <div class="skill-item">
-                        <span class="skill-name">GlusterFS</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 70%"></div>
-                        </div>
-                        <span class="skill-level">7/10</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Ceph</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 60%"></div>
-                        </div>
-                        <span class="skill-level">6/10</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Object Storage</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 60%"></div>
-                        </div>
-                        <span class="skill-level">6/10</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Velero</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 50%"></div>
-                        </div>
-                        <span class="skill-level">5/10</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Redis</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 50%"></div>
-                        </div>
-                        <span class="skill-level">5/10</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">PostgreSQL</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 50%"></div>
-                        </div>
-                        <span class="skill-level">5/10</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">XFS</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 40%"></div>
-                        </div>
-                        <span class="skill-level">4/10</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">TrueNAS</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 40%"></div>
-                        </div>
-                        <span class="skill-level">4/10</span>
+                    <div class="skill-badges">
+                        <span class="skill-badge">GlusterFS 7</span>
+                        <span class="skill-badge">EBS 7</span>
+                        <span class="skill-badge">Ceph 6</span>
+                        <span class="skill-badge">Object Storage 6</span>
+                        <span class="skill-badge">Velero 5</span>
+                        <span class="skill-badge">Redis 5</span>
+                        <span class="skill-badge">PostgreSQL 5</span>
+                        <span class="skill-badge">Longhorn 5</span>
+                        <span class="skill-badge">XFS 4</span>
+                        <span class="skill-badge">TrueNAS 4</span>
                     </div>
                 </div>
                 <div class="skill-category">
                     <h3>🖥️ Hardware</h3>
-                    <div class="skill-item">
-                        <span class="skill-name">Servers</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 70%"></div>
-                        </div>
-                        <span class="skill-level">7/10</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Keyboard</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 30%"></div>
-                        </div>
-                        <span class="skill-level">3/10</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Android</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 30%"></div>
-                        </div>
-                        <span class="skill-level">3/10</span>
+                    <div class="skill-badges">
+                        <span class="skill-badge">Servers 7</span>
+                        <span class="skill-badge">Raspberry RPi 5</span>
+                        <span class="skill-badge">Steam Deck  4</span>
                     </div>
                 </div>
                 <div class="skill-category">
                     <h3>🏗️ Infrastructure as Code</h3>
-                    <div class="skill-item">
-                        <span class="skill-name">Ansible</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 80%"></div>
-                        </div>
-                        <span class="skill-level">8/10</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Terragrunt</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 60%"></div>
-                        </div>
-                        <span class="skill-level">6/10</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Pulumi</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 40%"></div>
-                        </div>
-                        <span class="skill-level">4/10</span>
+                    <div class="skill-badges">
+                        <span class="skill-badge">Ansible 8</span>
+                        <span class="skill-badge">Terragrunt 6</span>
+                        <span class="skill-badge">Terraform 6</span>
+                        <span class="skill-badge">Pulumi 4</span>
                     </div>
                 </div>
                 <div class="skill-category">
                     <h3>📊 Monitoring and Logging</h3>
-                    <div class="skill-item">
-                        <span class="skill-name">Grafana</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 80%"></div>
-                        </div>
-                        <span class="skill-level">8/10</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Prometheus</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 60%"></div>
-                        </div>
-                        <span class="skill-level">6/10</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Alertmanager</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 60%"></div>
-                        </div>
-                        <span class="skill-level">6/10</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Loki</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 60%"></div>
-                        </div>
-                        <span class="skill-level">6/10</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">ntfy</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 50%"></div>
-                        </div>
-                        <span class="skill-level">5/10</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">ActualBudget</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 50%"></div>
-                        </div>
-                        <span class="skill-level">5/10</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Logstash</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 40%"></div>
-                        </div>
-                        <span class="skill-level">4/10</span>
+                    <div class="skill-badges">
+                        <span class="skill-badge">Grafana 8</span>
+                        <span class="skill-badge">Netdata 8</span>
+                        <span class="skill-badge">DataDog 7</span>
+                        <span class="skill-badge">Prometheus 6</span>
+                        <span class="skill-badge">Alertmanager 6</span>
+                        <span class="skill-badge">Loki 6</span>
+                        <span class="skill-badge">Uptime-Kuma 6</span>
+                        <span class="skill-badge">ntfy 5</span>
+                        <span class="skill-badge">ActualBudget 5</span>
+                        <span class="skill-badge">Dashy 5</span>
                     </div>
                 </div>
                 <div class="skill-category">
                     <h3>🔐 Networking and Security</h3>
-                    <div class="skill-item">
-                        <span class="skill-name">external-secrets</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 80%"></div>
-                        </div>
-                        <span class="skill-level">8/10</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Certmanager</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 60%"></div>
-                        </div>
-                        <span class="skill-level">6/10</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Ingress Nginx</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 60%"></div>
-                        </div>
-                        <span class="skill-level">6/10</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Tailscale</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 50%"></div>
-                        </div>
-                        <span class="skill-level">5/10</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">LetsEncrypt</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 50%"></div>
-                        </div>
-                        <span class="skill-level">5/10</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">LocalSend</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 50%"></div>
-                        </div>
-                        <span class="skill-level">5/10</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Keycloak</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 40%"></div>
-                        </div>
-                        <span class="skill-level">4/10</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">socat</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 40%"></div>
-                        </div>
-                        <span class="skill-level">4/10</span>
+                    <div class="skill-badges">
+                        <span class="skill-badge">external-secrets 8</span>
+                        <span class="skill-badge">Traefik 7</span>
+                        <span class="skill-badge">LastPass 7</span>
+                        <span class="skill-badge">Certmanager 6</span>
+                        <span class="skill-badge">Ingress Nginx 6</span>
+                        <span class="skill-badge">zerotier 6</span>
+                        <span class="skill-badge">DNS and Domains 6</span>
+                        <span class="skill-badge">Tailscale 5</span>
+                        <span class="skill-badge">LetsEncrypt 5</span>
+                        <span class="skill-badge">LocalSend 5</span>
                     </div>
                 </div>
                 <div class="skill-category">
                     <h3>⚙️ Orchestration and Cluster Management</h3>
-                    <div class="skill-item">
-                        <span class="skill-name">docker-compose</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 80%"></div>
-                        </div>
-                        <span class="skill-level">8/10</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">KEDA</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 60%"></div>
-                        </div>
-                        <span class="skill-level">6/10</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Cluster Autoscaler</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 60%"></div>
-                        </div>
-                        <span class="skill-level">6/10</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Reflector</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 60%"></div>
-                        </div>
-                        <span class="skill-level">6/10</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Proxmox</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 60%"></div>
-                        </div>
-                        <span class="skill-level">6/10</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Argo Rollout</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 50%"></div>
-                        </div>
-                        <span class="skill-level">5/10</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">permission-manager</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 50%"></div>
-                        </div>
-                        <span class="skill-level">5/10</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Talos</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 50%"></div>
-                        </div>
-                        <span class="skill-level">5/10</span>
+                    <div class="skill-badges">
+                        <span class="skill-badge">docker-compose 8</span>
+                        <span class="skill-badge">KUBERNETES 8</span>
+                        <span class="skill-badge">KEDA 6</span>
+                        <span class="skill-badge">Cluster Autoscaler 6</span>
+                        <span class="skill-badge">Reflector 6</span>
+                        <span class="skill-badge">Proxmox 6</span>
+                        <span class="skill-badge">microk8s 6</span>
+                        <span class="skill-badge">Argo Rollout 5</span>
+                        <span class="skill-badge">permission-manager 5</span>
+                        <span class="skill-badge">Talos 5</span>
                     </div>
                 </div>
                 <div class="skill-category">
                     <h3>💻 Programming Languages and Frameworks</h3>
-                    <div class="skill-item">
-                        <span class="skill-name">Git</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 60%"></div>
-                        </div>
-                        <span class="skill-level">6/10</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">HCL2</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 30%"></div>
-                        </div>
-                        <span class="skill-level">3/10</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Testcontainers</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 20%"></div>
-                        </div>
-                        <span class="skill-level">2/10</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Go</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 10%"></div>
-                        </div>
-                        <span class="skill-level">1/10</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">JavaScript</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 10%"></div>
-                        </div>
-                        <span class="skill-level">1/10</span>
+                    <div class="skill-badges">
+                        <span class="skill-badge">YAML 7</span>
+                        <span class="skill-badge">Bash 7</span>
+                        <span class="skill-badge">Git 6</span>
+                        <span class="skill-badge">Python 6</span>
+                        <span class="skill-badge">Hugo 4</span>
                     </div>
                 </div>
                 <div class="skill-category">
                     <h3>🛠️ Utils</h3>
-                    <div class="skill-item">
-                        <span class="skill-name">synergy</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 70%"></div>
-                        </div>
-                        <span class="skill-level">7/10</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">dmenu</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 70%"></div>
-                        </div>
-                        <span class="skill-level">7/10</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">zsh</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 70%"></div>
-                        </div>
-                        <span class="skill-level">7/10</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">rofi</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 60%"></div>
-                        </div>
-                        <span class="skill-level">6/10</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">clipmenu</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 60%"></div>
-                        </div>
-                        <span class="skill-level">6/10</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">fonts</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 50%"></div>
-                        </div>
-                        <span class="skill-level">5/10</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">eza</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 50%"></div>
-                        </div>
-                        <span class="skill-level">5/10</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">MacOS Specific</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: 40%"></div>
-                        </div>
-                        <span class="skill-level">4/10</span>
+                    <div class="skill-badges">
+                        <span class="skill-badge">SSH 8</span>
+                        <span class="skill-badge">synergy 7</span>
+                        <span class="skill-badge">dmenu 7</span>
+                        <span class="skill-badge">zsh 7</span>
+                        <span class="skill-badge">neoVIM 7</span>
+                        <span class="skill-badge">alacrity 7</span>
+                        <span class="skill-badge">pre-commit 7</span>
+                        <span class="skill-badge">Notion 7</span>
+                        <span class="skill-badge">i3wm 7</span>
+                        <span class="skill-badge">rofi 6</span>
                     </div>
                 </div>
             </div>

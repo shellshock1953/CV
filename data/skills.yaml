@@ -15,40 +15,40 @@ skill_categories:
   skills:
   - name: ArgoCD
     proficiency: 8
+  - name: Gitlab CI
+    proficiency: 7
+  - name: Github Actions
+    proficiency: 7
   - name: Argo Workflows
     proficiency: 6
-  - name: Make.com
-    proficiency: 2
-  - name: Ansible Event-Driven
-    proficiency: 1
+  - name: Jenkins
+    proficiency: 6
 - name: Cloud Providers and Services
   emoji: ☁️
   skills:
+  - name: Github
+    proficiency: 7
   - name: Symbiosis
     proficiency: 7
   - name: AWS
     proficiency: 7
-  - name: Heroku
-    proficiency: 3
-  - name: GCP
-    proficiency: 2
-  - name: Linode
-    proficiency: 1
+  - name: Gitlab
+    proficiency: 6
+  - name: Azure
+    proficiency: 6
+  - name: Oracle
+    proficiency: 4
 - name: Configuration Templating and Init
   emoji: 📝
   skills:
   - name: Helm
     proficiency: 6
-  - name: systemd
-    proficiency: 3
-  - name: Tini
-    proficiency: 1
-  - name: Timoni
-    proficiency: 1
 - name: Data Storage and Databases
   emoji: 💾
   skills:
   - name: GlusterFS
+    proficiency: 7
+  - name: EBS
     proficiency: 7
   - name: Ceph
     proficiency: 6
@@ -60,6 +60,8 @@ skill_categories:
     proficiency: 5
   - name: PostgreSQL
     proficiency: 5
+  - name: Longhorn
+    proficiency: 5
   - name: XFS
     proficiency: 4
   - name: TrueNAS
@@ -69,16 +71,18 @@ skill_categories:
   skills:
   - name: Servers
     proficiency: 7
-  - name: Keyboard
-    proficiency: 3
-  - name: Android
-    proficiency: 3
+  - name: Raspberry RPi
+    proficiency: 5
+  - name: 'Steam Deck '
+    proficiency: 4
 - name: Infrastructure as Code
   emoji: 🏗️
   skills:
   - name: Ansible
     proficiency: 8
   - name: Terragrunt
+    proficiency: 6
+  - name: Terraform
     proficiency: 6
   - name: Pulumi
     proficiency: 4
@@ -87,26 +91,40 @@ skill_categories:
   skills:
   - name: Grafana
     proficiency: 8
+  - name: Netdata
+    proficiency: 8
+  - name: DataDog
+    proficiency: 7
   - name: Prometheus
     proficiency: 6
   - name: Alertmanager
     proficiency: 6
   - name: Loki
     proficiency: 6
+  - name: Uptime-Kuma
+    proficiency: 6
   - name: ntfy
     proficiency: 5
   - name: ActualBudget
     proficiency: 5
-  - name: Logstash
-    proficiency: 4
+  - name: Dashy
+    proficiency: 5
 - name: Networking and Security
   emoji: 🔐
   skills:
   - name: external-secrets
     proficiency: 8
+  - name: Traefik
+    proficiency: 7
+  - name: LastPass
+    proficiency: 7
   - name: Certmanager
     proficiency: 6
   - name: Ingress Nginx
+    proficiency: 6
+  - name: zerotier
+    proficiency: 6
+  - name: DNS and Domains
     proficiency: 6
   - name: Tailscale
     proficiency: 5
@@ -114,14 +132,12 @@ skill_categories:
     proficiency: 5
   - name: LocalSend
     proficiency: 5
-  - name: Keycloak
-    proficiency: 4
-  - name: socat
-    proficiency: 4
 - name: Orchestration and Cluster Management
   emoji: ⚙️
   skills:
   - name: docker-compose
+    proficiency: 8
+  - name: KUBERNETES
     proficiency: 8
   - name: KEDA
     proficiency: 6
@@ -130,6 +146,8 @@ skill_categories:
   - name: Reflector
     proficiency: 6
   - name: Proxmox
+    proficiency: 6
+  - name: microk8s
     proficiency: 6
   - name: Argo Rollout
     proficiency: 5
@@ -140,32 +158,36 @@ skill_categories:
 - name: Programming Languages and Frameworks
   emoji: 💻
   skills:
+  - name: YAML
+    proficiency: 7
+  - name: Bash
+    proficiency: 7
   - name: Git
     proficiency: 6
-  - name: HCL2
-    proficiency: 3
-  - name: Testcontainers
-    proficiency: 2
-  - name: Go
-    proficiency: 1
-  - name: JavaScript
-    proficiency: 1
+  - name: Python
+    proficiency: 6
+  - name: Hugo
+    proficiency: 4
 - name: Utils
   emoji: 🛠️
   skills:
+  - name: SSH
+    proficiency: 8
   - name: synergy
     proficiency: 7
   - name: dmenu
     proficiency: 7
   - name: zsh
     proficiency: 7
+  - name: neoVIM
+    proficiency: 7
+  - name: alacrity
+    proficiency: 7
+  - name: pre-commit
+    proficiency: 7
+  - name: Notion
+    proficiency: 7
+  - name: i3wm
+    proficiency: 7
   - name: rofi
     proficiency: 6
-  - name: clipmenu
-    proficiency: 6
-  - name: fonts
-    proficiency: 5
-  - name: eza
-    proficiency: 5
-  - name: MacOS Specific
-    proficiency: 4

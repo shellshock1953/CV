@@ -90,39 +90,22 @@
             color: #1e40af;
             font-size: 0.85em;
         }
-        .skill-item {
+        .skill-badges {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin: 3px 0;
-            font-size: 0.75em;
-            gap: 6px;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: 6px;
         }
-        .skill-name {
-            flex: 1;
+        .skill-badge {
+            display: inline-block;
+            padding: 3px 8px;
+            background: linear-gradient(135deg, #e0e7ff, #dbeafe);
+            border: 1px solid #93c5fd;
+            border-radius: 12px;
+            font-size: 0.72em;
+            color: #1e40af;
             white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-        .skill-bar {
-            width: 80px;
-            height: 5px;
-            background: #e2e8f0;
-            border-radius: 2px;
-            overflow: hidden;
-            flex-shrink: 0;
-        }
-        .skill-fill {
-            height: 100%;
-            background: linear-gradient(90deg, #2563eb, #3b82f6);
-            border-radius: 2px;
-        }
-        .skill-level {
-            width: 26px;
-            text-align: right;
-            color: #64748b;
-            font-size: 0.75em;
-            flex-shrink: 0;
+            font-weight: 500;
         }
         .project-card {
             background: #f8fafc;
@@ -244,19 +227,16 @@
 
         <section>
             <h2>Technical Skills</h2>
+            <p style="font-size: 0.85em; color: #64748b; margin-bottom: 10px;">Numbers indicate proficiency level (1-10 scale)</p>
             <div class="skills-section">
                 {% for category in skills.skill_categories %}
                 <div class="skill-category">
                     <h3>{{ category.emoji }} {{ category.name }}</h3>
-                    {% for skill in category.skills %}
-                    <div class="skill-item">
-                        <span class="skill-name">{{ skill.name }}</span>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="width: {{ skill.proficiency * 10 }}%"></div>
-                        </div>
-                        <span class="skill-level">{{ skill.proficiency }}/10</span>
+                    <div class="skill-badges">
+                        {% for skill in category.skills %}
+                        <span class="skill-badge">{{ skill.name }} {{ skill.proficiency }}</span>
+                        {% endfor %}
                     </div>
-                    {% endfor %}
                 </div>
                 {% endfor %}
             </div>
