@@ -245,6 +245,18 @@
         </section>
 
         <section>
+            <h2>Technical Presentations</h2>
+            <ul style="list-style: none; padding: 0; margin: 10px 0;">
+            {% for presentation in presentations.presentations %}
+                <li style="margin: 8px 0; font-size: 0.9em;">
+                    🎤 <a href="{{ presentation.url }}" target="_blank" style="color: #2563eb; text-decoration: none; font-weight: 500;">{{ presentation.title }}</a>
+                    <span style="color: #64748b; font-size: 0.85em;"> — {{ presentation.description | trim }}</span>
+                </li>
+            {% endfor %}
+            </ul>
+        </section>
+
+        <section>
             <h2>Education</h2>
             {% for degree in education.degrees %}
             <div class="education-item">
