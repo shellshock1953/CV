@@ -1,0 +1,12 @@
+presentations:
+  - title: "Argo CD - GitOps Essentials"
+    description: "Comprehensive overview of GitOps principles and Argo CD implementation"
+    url: "https://www.youtube.com/watch?v=GoF3RDdAK3Q"
+
+  - title: "Argo Rollouts - Advanced Deployments"
+    description: "Advanced deployment strategies including blue-green and canary deployments"
+    url: "https://www.youtube.com/watch?v=HgTeB1OwcNU"
+
+  - title: "Argo Workflows - Kubernetes-Native Workflows"
+    description: "Deep dive into workflow orchestration and automation"
+    url: "https://youtu.be/EYrxhvwoXBo?si=UPfNExAcY5B6TVib"

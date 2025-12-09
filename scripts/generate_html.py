@@ -24,6 +24,7 @@ DATA_FILES = {
     "experience": "experience.yaml",
     "projects": "projects.yaml",
     "opensource": "opensource.yaml",
+    "presentations": "presentations.yaml",
     "skills": "skills.yaml",
     "education": "education.yaml",
     "languages": "languages.yaml",
